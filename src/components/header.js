@@ -1,30 +1,18 @@
 import PropTypes from "prop-types"
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faYelp, faFacebook } from "@fortawesome/free-brands-svg-icons"
-import Img from "gatsby-image"
 import { Link } from "gatsby"
+import logo from "../images/logo.png"
 
 import headerStyles from "./header.module.scss"
 
 const Header = ({ siteTitle }) => {
-  const data = useStaticQuery(graphql`
-    query {
-      placeholderImage: file(relativePath: { eq: "logo.png" }) {
-        childImageSharp {
-          fixed(width: 130, height: 43) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-    }
-  `)
   return (
     <header>
       <div className={headerStyles.logo}>
         <Link to="/">
-          <Img fixed={data.placeholderImage.childImageSharp.fixed} />
+          <img src={logo} />
         </Link>
       </div>
       <div className={headerStyles.nav}>

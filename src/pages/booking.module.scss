@@ -1,0 +1,55 @@
+.page-head {
+  text-align: center;
+}
+.title {
+  margin: 20px 0;
+}
+.sub-title {
+  margin: 40px 0;
+}
+.services {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.service-container {
+  align-items: center;
+  justify-content: center;
+  width: 29%;
+  margin: 0 20px 20px 0;
+  border: 1px solid #eaeaeb;
+  border-radius: 5px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+.service-wrapper {
+}
+.image-container {
+  text-align: center;
+}
+.service-image {
+  width: 80px;
+}
+.service-title {
+  text-align: center;
+  p {
+    display: inline-block;
+    margin: 0 5px 0 0;
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 826px) {
+  .service-container {
+    width: 45%;
+  }
+}
+@media only screen and (max-width: 610px) {
+  .service-container {
+    width: 100%;
+
+    margin: 0 0 20px 0;
+  }
+}

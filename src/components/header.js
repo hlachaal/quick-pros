@@ -1,15 +1,102 @@
-import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faYelp, faFacebook } from "@fortawesome/free-brands-svg-icons"
+import Img from "gatsby-image"
+import { Link } from "gatsby"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
+import headerStyles from "./header.module.scss"
+
+const Header = ({ siteTitle }) => {
+  const data = useStaticQuery(graphql`
+    query {
+      placeholderImage: file(relativePath: { eq: "logo.png" }) {
+        childImageSharp {
+          fixed(width: 130, height: 43) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+    }
+  `)
+  return (
+    <header>
+      <div className={headerStyles.logo}>
+        <Link to="/">
+          <Img fixed={data.placeholderImage.childImageSharp.fixed} />
+        </Link>
+      </div>
+      <div className={headerStyles.nav}>
+        <nav>
+          <input type="checkbox" id="toggle" />
+          <ul className={headerStyles.navList}>
+            <li>
+              <Link
+                className={headerStyles.navItem}
+                activeClassName={headerStyles.activeNavItem}
+                to="/services"
+              >
+                Services
+              </Link>
+            </li>
+            <li>
+              <Link
+                className={headerStyles.navItem}
+                activeClassName={headerStyles.activeNavItem}
+                to="/pricing"
+              >
+                Pricing
+              </Link>
+            </li>
+            <li>
+              <Link
+                className={headerStyles.navItem}
+                activeClassName={headerStyles.activeNavItem}
+                to="/book-a-service"
+              >
+                Book a Service
+              </Link>
+            </li>
+            <li>
+              <Link
+                className={headerStyles.navItem}
+                activeClassName={headerStyles.activeNavItem}
+                to="/faq"
+              >
+                FAQ
+              </Link>
+            </li>
+            <li>
+              <Link
+                className={headerStyles.navItem}
+                activeClassName={headerStyles.activeNavItem}
+                to="/contact"
+              >
+                Contact
+              </Link>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div className={headerStyles.hamburger}>
+        <label htmlFor="toggle">&#9776;</label>
+      </div>
+      <div className={headerStyles.social}>
+        <ul>
+          <li>
+            <a href="#">
+              <FontAwesomeIcon icon={faYelp} />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <FontAwesomeIcon icon={faFacebook} />
+            </a>
+          </li>
+        </ul>
+      </div>
+      {/* <div
       style={{
         margin: `0 auto`,
         maxWidth: 960,
@@ -27,9 +114,10 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Link>
       </h1>
-    </div>
-  </header>
-)
+    </div> */}
+    </header>
+  )
+}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,

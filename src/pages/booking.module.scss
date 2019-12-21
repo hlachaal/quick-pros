@@ -23,6 +23,13 @@
   border-radius: 5px;
   padding-bottom: 10px;
   padding-top: 10px;
+  button {
+    background: transparent;
+    border: 0;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+  }
 }
 .service-wrapper {
 }

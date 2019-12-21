@@ -6,6 +6,9 @@ header {
 .logo {
   width: 130px;
   flex: 1;
+  img {
+    width: 130px;
+  }
 }
 .nav {
   flex: 4;

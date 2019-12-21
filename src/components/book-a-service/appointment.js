@@ -49,7 +49,7 @@ class Appointment extends Component {
           onSelectTv={this.selectTv}
           onSelectFurniture={this.selectFurniture}
           onSelectHandyman={this.selectHandyman}
-          onSelectIphone={this.selectHandyman}
+          onSelectIphone={this.selectIphone}
           onSelectMoving={this.selectMoving}
         />
       )
@@ -57,7 +57,7 @@ class Appointment extends Component {
   }
   renderService() {
     if (this.state.serviceTypeSelected && !this.state.serviceSelected) {
-      return <Service />
+      return <Service serviceType={this.state.serviceType} />
     }
   }
 

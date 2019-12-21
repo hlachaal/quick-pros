@@ -26,7 +26,6 @@
   button {
     background: transparent;
     border: 0;
-    height: 100%;
     width: 100%;
     margin: auto;
     cursor: pointer;
@@ -48,7 +47,23 @@
     font-size: 14px;
   }
 }
-
+.question {
+  text-align: center;
+  p {
+    font-size: 1.5em;
+  }
+}
+.service-list {
+  display: flex;
+  flex-direction: column;
+  button {
+    background: transparent;
+    border: 0;
+    width: 100%;
+    margin: auto;
+    cursor: pointer;
+  }
+}
 @media only screen and (max-width: 826px) {
   .service-container {
     width: 45%;

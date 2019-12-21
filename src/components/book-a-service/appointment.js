@@ -1,7 +1,5 @@
 import React, { Component, Fragment } from "react"
 
-import bookingStyles from "../../pages/booking.module.scss"
-
 import ServiceType from "./serviceType"
 import Service from "./service"
 

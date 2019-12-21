@@ -12,7 +12,7 @@ const Header = ({ siteTitle }) => {
     <header>
       <div className={headerStyles.logo}>
         <Link to="/">
-          <img src={logo} />
+          <img alt="Home services" src={logo} />
         </Link>
       </div>
       <div className={headerStyles.nav}>
@@ -73,12 +73,12 @@ const Header = ({ siteTitle }) => {
       <div className={headerStyles.social}>
         <ul>
           <li>
-            <a href="#">
+            <a href="https://yelp.com">
               <FontAwesomeIcon icon={faYelp} />
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="htts://facebook.com">
               <FontAwesomeIcon icon={faFacebook} />
             </a>
           </li>

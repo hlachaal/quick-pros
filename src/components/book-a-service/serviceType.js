@@ -28,7 +28,11 @@ class ServiceType extends Component {
               className={bookingStyles.serviceWrapper}
             >
               <div className={bookingStyles.imageContainer}>
-                <img className={bookingStyles.serviceImage} src={appliance} />
+                <img
+                  alt="appliance install and repair"
+                  className={bookingStyles.serviceImage}
+                  src={appliance}
+                />
               </div>
               <div className={bookingStyles.serviceTitle}>
                 <p>Appliance</p>
@@ -43,7 +47,11 @@ class ServiceType extends Component {
               className={bookingStyles.serviceWrapper}
             >
               <div className={bookingStyles.imageContainer}>
-                <img className={bookingStyles.serviceImage} src={tv} />
+                <img
+                  alt="TV mounting"
+                  className={bookingStyles.serviceImage}
+                  src={tv}
+                />
               </div>
               <div className={bookingStyles.serviceTitle}>
                 <p>TV</p>
@@ -58,7 +66,11 @@ class ServiceType extends Component {
               className={bookingStyles.serviceWrapper}
             >
               <div className={bookingStyles.imageContainer}>
-                <img className={bookingStyles.serviceImage} src={furniture} />
+                <img
+                  alt="Furniture assembly and delivery"
+                  className={bookingStyles.serviceImage}
+                  src={furniture}
+                />
               </div>
               <div className={bookingStyles.serviceTitle}>
                 <p>Furniture</p>
@@ -73,7 +85,11 @@ class ServiceType extends Component {
               className={bookingStyles.serviceWrapper}
             >
               <div className={bookingStyles.imageContainer}>
-                <img className={bookingStyles.serviceImage} src={handyman} />
+                <img
+                  alt="Handyman services"
+                  className={bookingStyles.serviceImage}
+                  src={handyman}
+                />
               </div>
               <div className={bookingStyles.serviceTitle}>
                 <p>Handyman</p>
@@ -88,7 +104,11 @@ class ServiceType extends Component {
               className={bookingStyles.serviceWrapper}
             >
               <div className={bookingStyles.imageContainer}>
-                <img className={bookingStyles.serviceImage} src={iPhone} />
+                <img
+                  alt="iPhone repair"
+                  className={bookingStyles.serviceImage}
+                  src={iPhone}
+                />
               </div>
               <div className={bookingStyles.serviceTitle}>
                 <p>iPhone</p>
@@ -103,7 +123,11 @@ class ServiceType extends Component {
               className={bookingStyles.serviceWrapper}
             >
               <div className={bookingStyles.imageContainer}>
-                <img className={bookingStyles.serviceImage} src={moving} />
+                <img
+                  alt="Moving and hauling"
+                  className={bookingStyles.serviceImage}
+                  src={moving}
+                />
               </div>
               <div className={bookingStyles.serviceTitle}>
                 <p>Moving &</p>

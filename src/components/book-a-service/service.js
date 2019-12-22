@@ -85,7 +85,7 @@ class Service extends Component {
     return (
       <Fragment>
         <div className={bookingStyles.question}>
-          <p>{this.renderQuestion()}</p>
+          <p>Choose a service to get started</p>
         </div>
         {this.renderServices()}
       </Fragment>

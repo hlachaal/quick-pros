@@ -49,6 +49,8 @@
 }
 .question {
   text-align: center;
+  margin: 50px 0 90px 0;
+  color: #46475c;
   p {
     font-size: 1.5em;
   }
@@ -58,11 +60,24 @@
   flex-direction: column;
   button {
     background: transparent;
-    border: 0;
     width: 100%;
-    margin: auto;
     cursor: pointer;
   }
+}
+.list-item {
+  margin-bottom: 10px;
+  padding: 17.5px 20px;
+  box-sizing: border-box;
+  border: 1px solid #eceef1;
+  border-radius: 10px;
+  box-shadow: 0 3px 20px 0 rgba(131, 134, 163, 0.12);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.28;
+  color: #46475c;
+  display: block;
+  margin: 10px 0;
+  width: 100%;
 }
 @media only screen and (max-width: 826px) {
   .service-container {

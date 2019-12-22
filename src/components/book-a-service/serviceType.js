@@ -18,7 +18,7 @@ class ServiceType extends Component {
             <h1>Book a Service</h1>
           </div>
           <div className={bookingStyles.subTitle}>
-            <p>Save time and money with same-day setup and repairs</p>
+            <p>Save time and money with same-day service</p>
           </div>
         </div>
         <section className={bookingStyles.services}>

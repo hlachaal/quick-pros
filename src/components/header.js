@@ -3,7 +3,7 @@ import React from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faYelp, faFacebook } from "@fortawesome/free-brands-svg-icons"
 import { Link } from "gatsby"
-import logo from "../images/logo.png"
+import logo from "../images/logo.svg"
 
 import headerStyles from "./header.module.scss"
 

@@ -111,7 +111,7 @@ class ServiceType extends Component {
                 />
               </div>
               <div className={bookingStyles.serviceTitle}>
-                <p>iPhone</p>
+                <p>Gadget</p>
                 <p>Repair</p>
               </div>
             </button>

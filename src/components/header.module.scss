@@ -120,6 +120,6 @@ header {
 input:checked ~ .nav-list {
   display: block;
 }
-input {
+input[type="checkbox"] {
   display: none;
 }

@@ -53,7 +53,7 @@
 .question {
   color: #4a4b4d;
   text-align: center;
-  margin: 50px 0 90px 0;
+  margin: 40px 0 60px 0;
   p {
     font-size: 1.5em;
   }
@@ -83,6 +83,28 @@
 }
 .list-item:hover {
   box-shadow: 0 3px 20px 0 rgba(131, 134, 163, 0.12);
+}
+.zip-code-form {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  input {
+    width: 200px;
+    margin: auto;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  button {
+    width: 170px;
+    margin: 70px auto;
+    color: white;
+    background: #5692d8;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
 }
 @media only screen and (max-width: 826px) {
   .service-container {

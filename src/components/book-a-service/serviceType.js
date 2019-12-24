@@ -24,7 +24,7 @@ class ServiceType extends Component {
         <section className={bookingStyles.services}>
           <div className={bookingStyles.serviceContainer}>
             <button
-              onClick={this.props.onSelectAppliance}
+              onClick={() => this.props.onSelectServiceType("appliance")}
               className={bookingStyles.serviceWrapper}
             >
               <div className={bookingStyles.imageContainer}>
@@ -36,14 +36,14 @@ class ServiceType extends Component {
               </div>
               <div className={bookingStyles.serviceTitle}>
                 <p>Appliance</p>
-                <p>Services</p>
+                <p>Repair</p>
               </div>
             </button>
           </div>
 
           <div className={bookingStyles.serviceContainer}>
             <button
-              onClick={this.props.onSelectTv}
+              onClick={() => this.props.onSelectServiceType("tv")}
               className={bookingStyles.serviceWrapper}
             >
               <div className={bookingStyles.imageContainer}>
@@ -62,7 +62,7 @@ class ServiceType extends Component {
 
           <div className={bookingStyles.serviceContainer}>
             <button
-              onClick={this.props.onSelectFurniture}
+              onClick={() => this.props.onSelectServiceType("furniture")}
               className={bookingStyles.serviceWrapper}
             >
               <div className={bookingStyles.imageContainer}>
@@ -81,7 +81,7 @@ class ServiceType extends Component {
 
           <div className={bookingStyles.serviceContainer}>
             <button
-              onClick={this.props.onSelectHandyman}
+              onClick={() => this.props.onSelectServiceType("handyman")}
               className={bookingStyles.serviceWrapper}
             >
               <div className={bookingStyles.imageContainer}>
@@ -100,7 +100,7 @@ class ServiceType extends Component {
 
           <div className={bookingStyles.serviceContainer}>
             <button
-              onClick={this.props.onSelectIphone}
+              onClick={() => this.props.onSelectServiceType("iphone")}
               className={bookingStyles.serviceWrapper}
             >
               <div className={bookingStyles.imageContainer}>
@@ -119,7 +119,7 @@ class ServiceType extends Component {
 
           <div className={bookingStyles.serviceContainer}>
             <button
-              onClick={this.props.onSelectMoving}
+              onClick={() => this.props.onSelectServiceType("moving")}
               className={bookingStyles.serviceWrapper}
             >
               <div className={bookingStyles.imageContainer}>
@@ -130,8 +130,8 @@ class ServiceType extends Component {
                 />
               </div>
               <div className={bookingStyles.serviceTitle}>
-                <p>Moving &</p>
-                <p>Hauling</p>
+                <p>Heavy</p>
+                <p>Lifting</p>
               </div>
             </button>
           </div>

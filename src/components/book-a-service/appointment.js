@@ -2,6 +2,7 @@ import React, { Component, Fragment } from "react"
 
 import ServiceType from "./serviceType"
 import Service from "./service"
+import ZipCode from "./zipCode"
 
 class Appointment extends Component {
   constructor(props) {
@@ -11,51 +12,50 @@ class Appointment extends Component {
       serviceTypeSelected: false,
       service: 0,
       serviceSelected: false,
+      zipCode: 0,
+      zipCodeSelected: false,
     }
+    this.selectServiceType = this.selectServiceType.bind(this)
+    this.selectService = this.selectService.bind(this)
   }
 
-  selectServiceType = e => {
-    console.log(e)
-    const serviceType = e
+  selectServiceType = param => {
+    const serviceType = param
     const serviceTypeSelected = true
     this.setState({ serviceType, serviceTypeSelected })
   }
-  selectAppliance = () => {
-    this.selectServiceType("appliance")
-  }
-  selectTv = () => {
-    this.selectServiceType("tv")
-  }
-  selectFurniture = () => {
-    this.selectServiceType("furniture")
-  }
-  selectHandyman = () => {
-    this.selectServiceType("handyman")
-  }
-  selectIphone = () => {
-    this.selectServiceType("iphone")
-  }
-  selectMoving = () => {
-    this.selectServiceType("moving")
+  selectService = param => {
+    const service = param
+    const serviceSelected = true
+    this.setState({ service, serviceSelected })
+    console.log("ok")
   }
 
   renderServiceType() {
     if (!this.state.serviceTypeSelected) {
-      return (
-        <ServiceType
-          onSelectAppliance={this.selectAppliance}
-          onSelectTv={this.selectTv}
-          onSelectFurniture={this.selectFurniture}
-          onSelectHandyman={this.selectHandyman}
-          onSelectIphone={this.selectIphone}
-          onSelectMoving={this.selectMoving}
-        />
-      )
+      return <ServiceType onSelectServiceType={this.selectServiceType} />
     }
   }
   renderService() {
     if (this.state.serviceTypeSelected && !this.state.serviceSelected) {
-      return <Service serviceType={this.state.serviceType} />
+      return (
+        <Service
+          onSelectService={this.selectService}
+          service={this.state.service}
+          serviceSelected={this.state.serviceSelected}
+          serviceType={this.state.serviceType}
+        />
+      )
+    }
+  }
+
+  renderZipCodeForm() {
+    if (
+      this.state.serviceTypeSelected &&
+      this.state.serviceSelected &&
+      !this.state.zipCodeSelected
+    ) {
+      return <ZipCode />
     }
   }
 
@@ -64,6 +64,7 @@ class Appointment extends Component {
       <Fragment>
         {this.renderServiceType()}
         {this.renderService()}
+        {this.renderZipCodeForm()}
       </Fragment>
     )
   }

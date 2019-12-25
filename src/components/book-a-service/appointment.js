@@ -3,6 +3,7 @@ import React, { Component, Fragment } from "react"
 import ServiceType from "./serviceType"
 import Service from "./service"
 import ZipCode from "./zipCode"
+import ServiceDetails from "./serviceDetails"
 
 class Appointment extends Component {
   constructor(props) {
@@ -14,9 +15,11 @@ class Appointment extends Component {
       serviceSelected: false,
       zipCode: 0,
       zipCodeSelected: false,
+      zipDetailsSelected: false,
     }
     this.selectServiceType = this.selectServiceType.bind(this)
     this.selectService = this.selectService.bind(this)
+    this.selectZipCode = this.selectZipCode.bind(this)
   }
 
   selectServiceType = param => {
@@ -29,6 +32,11 @@ class Appointment extends Component {
     const serviceSelected = true
     this.setState({ service, serviceSelected })
     console.log("ok")
+  }
+  selectZipCode = param => {
+    const zipCode = param
+    const zipCodeSelected = true
+    this.setState({ zipCode, zipCodeSelected })
   }
 
   renderServiceType() {
@@ -55,7 +63,24 @@ class Appointment extends Component {
       this.state.serviceSelected &&
       !this.state.zipCodeSelected
     ) {
-      return <ZipCode />
+      return <ZipCode onSelectZipCode={this.selectZipCode} />
+    }
+  }
+
+  renderServiceDetails() {
+    if (
+      this.state.serviceTypeSelected &&
+      this.state.serviceSelected &&
+      this.state.zipCodeSelected &&
+      !this.state.zipDetailsSelected
+    ) {
+      return (
+        <ServiceDetails
+          serviceType={this.state.serviceType}
+          service={this.state.service}
+          zipCode={this.state.zipCode}
+        />
+      )
     }
   }
 
@@ -65,6 +90,7 @@ class Appointment extends Component {
         {this.renderServiceType()}
         {this.renderService()}
         {this.renderZipCodeForm()}
+        {this.renderServiceDetails()}
       </Fragment>
     )
   }

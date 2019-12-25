@@ -105,6 +105,14 @@
     border-radius: 5px;
     cursor: pointer;
   }
+  button:disabled {
+    background: #dddddd;
+  }
+  .err {
+    color: red;
+    margin: 0 auto;
+    width: 200px;
+  }
 }
 @media only screen and (max-width: 826px) {
   .service-container {

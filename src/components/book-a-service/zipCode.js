@@ -23,6 +23,9 @@ class ZipCode extends Component {
       })
     }
   }
+  handleChange = e => {
+    console.log("hi".e.value)
+  }
   render() {
     return (
       <Fragment>

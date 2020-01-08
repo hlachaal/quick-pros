@@ -85,24 +85,31 @@
   box-shadow: 0 3px 20px 0 rgba(131, 134, 163, 0.12);
 }
 .zip-code-form {
+  div {
+    width: 200px;
+    margin: auto;
+    span {
+      margin-left: -25px;
+    }
+  }
   width: 80%;
   margin: auto;
-  padding: 20px;
   display: flex;
   flex-direction: column;
   input {
     width: 200px;
     margin: auto;
-    padding: 5px;
+    padding: 10px;
     border-radius: 5px;
   }
   button {
-    width: 170px;
-    margin: 70px auto;
-    color: white;
-    background: #5692d8;
-    padding: 5px;
+    width: 200px;
+    margin: 40px auto;
     border-radius: 5px;
+    padding: 10px;
+    border: none;
+    background: #235197;
+    color: white;
     cursor: pointer;
   }
   button:disabled {
@@ -114,9 +121,64 @@
     width: 200px;
   }
 }
+.comment-form {
+  width: 60%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  textarea {
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  button {
+    margin-top: 40px;
+    border-radius: 5px;
+    padding: 10px;
+    border: none;
+    background: #235197;
+    color: white;
+    cursor: pointer;
+  }
+  button:hover {
+    background: #4478bf;
+  }
+}
+.calender {
+  width: 358px;
+  margin: auto;
+}
+.ctrl {
+  width: 358px;
+  margin: auto;
+  button {
+    width: 200px;
+    margin: 40px auto;
+    border-radius: 5px;
+    padding: 10px;
+    border: none;
+    background: #235197;
+    color: white;
+    cursor: pointer;
+    display: block;
+  }
+  button:disabled {
+    background: #dddddd;
+  }
+  .err {
+    color: red;
+    position: absolute;
+    margin-top: -35px;
+    margin-left: 75px;
+  }
+}
 @media only screen and (max-width: 826px) {
   .service-container {
     width: 45%;
+  }
+  .comment-form {
+    width: 80%;
   }
 }
 @media only screen and (max-width: 610px) {
@@ -124,5 +186,8 @@
     width: 100%;
 
     margin: 0 0 20px 0;
+  }
+  .comment-form {
+    width: 100%;
   }
 }

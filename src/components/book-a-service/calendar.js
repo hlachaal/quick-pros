@@ -1,0 +1,47 @@
+import React, { Component, Fragment } from "react"
+import bookingStyles from "../../pages/booking.module.scss"
+import DatePicker from "react-datepicker"
+import setMinutes from "date-fns/setMinutes"
+import setHours from "date-fns/setHours"
+import "moment-timezone"
+import moment from "moment"
+import "react-datepicker/dist/react-datepicker.css"
+
+class Calendar extends Component {
+  constructor(props) {
+    super(props)
+  }
+  render() {
+    return (
+      <Fragment>
+        <div className={bookingStyles.question}>
+          <p>What's your preferred timing?</p>
+        </div>
+        <div>
+          <DatePicker
+            inline
+            minDate={moment().toDate()}
+            minTime={setHours(setMinutes(new Date(), 0), 7)}
+            maxTime={setHours(setMinutes(new Date(), 0), 20)}
+            selected={this.props.startDate}
+            onChange={this.props.onHandleChange}
+            showTimeSelect
+            dateFormat="MMMM d, yyyy h:mm aa"
+            calendarClassName={bookingStyles.calender}
+          />
+        </div>
+        <div className={bookingStyles.ctrl}>
+          <p className={bookingStyles.err}>{this.props.errDate}</p>
+          <button
+            disabled={this.props.errDate !== "" ? true : false}
+            onClick={this.props.onSelectDate}
+          >
+            Continue
+          </button>
+        </div>
+      </Fragment>
+    )
+  }
+}
+
+export default Calendar

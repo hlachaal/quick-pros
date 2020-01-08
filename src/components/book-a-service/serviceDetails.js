@@ -1,18 +1,15 @@
 import React, { Component, Fragment } from "react"
 import bookingStyles from "../../pages/booking.module.scss"
+import { getQuestions } from "./utils"
+
 class ServiceDetails extends Component {
   constructor(props) {
     super(props)
     this.state = {}
   }
-  componentDidMount() {
-    console.log(
-      ` ${this.props.serviceType} ${this.props.service} ${this.props.zipCode}`
-    )
-  }
 
-  renderQuestion() {
-    switch (this.props.service) {
+  renderStep1() {
+    switch (this.props.allServiceInfo.service.name) {
       case "refrigerator":
         return "Is your refrigerator built-in?"
       case "tv":
@@ -30,14 +27,7 @@ class ServiceDetails extends Component {
     }
   }
   render() {
-    return (
-      <Fragment>
-        <div className={bookingStyles.question}>
-          <p></p>
-        </div>
-        <section className={bookingStyles.zipCodeForm}></section>
-      </Fragment>
-    )
+    return <Fragment>{this.renderStep1()}</Fragment>
   }
 }
 

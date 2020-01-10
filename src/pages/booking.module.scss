@@ -148,6 +148,7 @@
 .calender {
   width: 358px;
   margin: auto;
+  display: flex !important;
 }
 .ctrl {
   width: 358px;
@@ -155,6 +156,36 @@
   button {
     width: 200px;
     margin: 40px auto;
+    border-radius: 5px;
+    padding: 10px;
+    border: none;
+    background: #235197;
+    color: white;
+    cursor: pointer;
+    display: block;
+  }
+  button:disabled {
+    background: #dddddd;
+  }
+  .err {
+    color: red;
+  }
+}
+.formWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: auto;
+  input,
+  textarea {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 40px;
+    border-radius: 5px;
+  }
+  button {
+    width: 200px;
+    margin: auto;
     border-radius: 5px;
     padding: 10px;
     border: none;

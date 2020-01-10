@@ -8,6 +8,9 @@ import { getQuestions } from "./utils"
 import ServiceQuestion from "./serviceQuestion"
 import CuComment from "./cuComment"
 import Calendar from "./calendar"
+import CuInfo from "./cuInfo"
+import ReviewDetails from "./reviewDetails"
+import Address from "./address"
 
 class Appointment extends Component {
   constructor(props) {
@@ -20,6 +23,9 @@ class Appointment extends Component {
       detailsSelected: false,
       commentSelected: false,
       calendarSelected: false,
+      addressSelected: false,
+      cuInfoSelected: false,
+      detailsReviewed: false,
       allServiceInfo: {
         serviceType: "",
         service: {
@@ -29,7 +35,19 @@ class Appointment extends Component {
         },
       },
       startDate: new Date(),
-      timeSelected: false,
+      customerInfo: {
+        address: "",
+        apt: "",
+        fname: "",
+        lname: "",
+        phone: "",
+        email: "",
+        instructions: "",
+        phoneErr: "",
+        emailErr: "",
+        addressErr: "",
+        buttonDisabled: true,
+      },
     }
   }
 
@@ -37,7 +55,6 @@ class Appointment extends Component {
     const serviceType = param
     const serviceTypeSelected = true
     this.setState({
-      serviceType,
       allServiceInfo: {
         ...this.state.allServiceInfo,
         serviceType: serviceType,
@@ -110,8 +127,6 @@ class Appointment extends Component {
           />
         )
       }
-
-      //return <ServiceDetails allServiceInfo={this.state.allServiceInfo} />
     }
   }
   answerToQuestion = (q, a, screens) => {
@@ -119,7 +134,7 @@ class Appointment extends Component {
     service.questions.push(q)
     service.answers.push(a)
 
-    if (screens == 1) {
+    if (screens === 1) {
       this.setState({
         allServiceInfo: {
           ...this.state.allServiceInfo,
@@ -201,6 +216,103 @@ class Appointment extends Component {
     }
   }
 
+  selectAddress = () => {
+    this.setState({
+      ...this.state,
+      addressSelected: true,
+      customerInfo: {
+        ...this.state.customerInfo,
+        buttonDisabled: true,
+      },
+    })
+  }
+  updateAddress = e => {
+    this.setState({
+      ...this.state,
+      customerInfo: {
+        ...this.state.customerInfo,
+        address: e,
+        buttonDisabled: false,
+      },
+    })
+  }
+  updateInput = e => {
+    this.setState({
+      ...this.state,
+      customerInfo: {
+        ...this.state.customerInfo,
+        [e.target.name]: e.target.value,
+      },
+    })
+  }
+  renderAddress() {
+    if (
+      this.state.serviceTypeSelected &&
+      this.state.zipCodeSelected &&
+      this.state.serviceSelected &&
+      this.state.detailsSelected &&
+      this.state.commentSelected &&
+      this.state.calendarSelected &&
+      !this.state.addressSelected
+    ) {
+      return (
+        <Address
+          customerInfo={this.state.customerInfo}
+          onUpdateAddress={this.updateAddress}
+          onUpdateInput={this.updateInput}
+          onSelectAddress={this.selectAddress}
+        />
+      )
+    }
+  }
+
+  cusInfoChange = e => {
+    let phoneErr = ""
+    let emailErr = ""
+    let buttonDisabled = true
+
+    if (e.target.name === "phone") {
+      let re = /^[(]?[0-9]{3}[)]?[-\s.]?[0-9]{3}[-/\s.]?[0-9]{4}$/
+      if (!re.test(e.target.value)) {
+        phoneErr = "Please enter a valid phone number."
+      } else {
+        if (
+          this.state.customerInfo.phone !== "" &&
+          this.state.customerInfo.email !== ""
+        ) {
+          buttonDisabled = false
+        }
+      }
+    } else {
+      let re = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/
+      if (!re.test(e.target.value)) {
+        emailErr = "Please enter a valid email."
+      } else {
+        if (
+          this.state.customerInfo.phone !== "" &&
+          this.state.customerInfo.email !== ""
+        ) {
+          buttonDisabled = false
+        }
+      }
+    }
+    this.setState({
+      ...this.state,
+      customerInfo: {
+        ...this.state.customerInfo,
+        [e.target.name]: e.target.value,
+        phoneErr,
+        emailErr,
+        buttonDisabled,
+      },
+    })
+  }
+  selectCusInfo = () => {
+    this.setState({
+      ...this.state,
+      cuInfoSelected: true,
+    })
+  }
   renderCuInfo() {
     if (
       this.state.serviceTypeSelected &&
@@ -209,9 +321,31 @@ class Appointment extends Component {
       this.state.detailsSelected &&
       this.state.commentSelected &&
       this.state.calendarSelected &&
+      this.state.addressSelected &&
       !this.state.cuInfoSelected
     ) {
-      return <h1>Customer Info</h1>
+      return (
+        <CuInfo
+          customerInfo={this.state.customerInfo}
+          onCusInfoChange={this.cusInfoChange}
+          onUpdateInput={this.updateInput}
+          onSelectCusInfo={this.selectCusInfo}
+        />
+      )
+    }
+  }
+  renderReviewDetails() {
+    if (
+      this.state.serviceTypeSelected &&
+      this.state.zipCodeSelected &&
+      this.state.serviceSelected &&
+      this.state.detailsSelected &&
+      this.state.commentSelected &&
+      this.state.calendarSelected &&
+      this.state.cuInfoSelected &&
+      !this.state.detailsReviewed
+    ) {
+      return <ReviewDetails data={this.state} />
     }
   }
 
@@ -224,7 +358,9 @@ class Appointment extends Component {
         {this.renderServiceDetails()}
         {this.renderComment()}
         {this.renderCalendar()}
+        {this.renderAddress()}
         {this.renderCuInfo()}
+        {this.renderReviewDetails()}
       </Fragment>
     )
   }

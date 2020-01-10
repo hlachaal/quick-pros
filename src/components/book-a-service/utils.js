@@ -26,7 +26,6 @@ export function getQuestions(name) {
           ],
         },
       ]
-      break
 
     case "dryer":
       return [
@@ -61,7 +60,6 @@ export function getQuestions(name) {
           ],
         },
       ]
-      break
 
     case "oven":
       return [
@@ -82,7 +80,6 @@ export function getQuestions(name) {
           a: ["Not Heating", "No power", "Other"],
         },
       ]
-      break
 
     case "washer":
       return [
@@ -114,7 +111,6 @@ export function getQuestions(name) {
           ],
         },
       ]
-      break
 
     case "dishwasher":
       return [
@@ -135,7 +131,6 @@ export function getQuestions(name) {
           a: ["Leaking", "Odor", "Not draining", "No power", "Other"],
         },
       ]
-      break
 
     case "cooktop":
       return [
@@ -156,7 +151,6 @@ export function getQuestions(name) {
           a: ["No power", "Other"],
         },
       ]
-      break
 
     case "freezer":
       return [
@@ -177,7 +171,6 @@ export function getQuestions(name) {
           a: ["No power", "Other"],
         },
       ]
-      break
 
     case "microwave":
       return [
@@ -198,7 +191,68 @@ export function getQuestions(name) {
           a: ["No power", "Other"],
         },
       ]
-      break
+
+    case 'up to 31"' || '32" - 60"' || '61" - 80"' || 'over 81"':
+      return [
+        {
+          q: "Select bracket type",
+          a: ["Fixed", "Tilting", "Full motion", "I already have a bracket"],
+        },
+        {
+          q: "Where the TV will be mounted?",
+          a: ["On the wall", "Above the fireplace", "Other"],
+        },
+        {
+          q: "Select your wall type",
+          a: ["Drywall or wood", "Brick", "Concrete", "Other"],
+        },
+      ]
+
+    case '32" - 60"':
+      return [
+        {
+          q: "Select bracket type",
+          a: ["Fixed", "Tilting", "Full motion", "I already have a bracket"],
+        },
+        {
+          q: "Where the TV will be mounted?",
+          a: ["On the wall", "Above the fireplace", "Other"],
+        },
+        {
+          q: "Select your wall type",
+          a: ["Drywall or wood", "Brick", "Concrete", "Other"],
+        },
+      ]
+    case 'over 81"':
+      return [
+        {
+          q: "Select bracket type",
+          a: ["Fixed", "Tilting", "Full motion", "I already have a bracket"],
+        },
+        {
+          q: "Where the TV will be mounted?",
+          a: ["On the wall", "Above the fireplace", "Other"],
+        },
+        {
+          q: "Select your wall type",
+          a: ["Drywall or wood", "Brick", "Concrete", "Other"],
+        },
+      ]
+    case '61" - 80"':
+      return [
+        {
+          q: "Select bracket type",
+          a: ["Fixed", "Tilting", "Full motion", "I already have a bracket"],
+        },
+        {
+          q: "Where the TV will be mounted?",
+          a: ["On the wall", "Above the fireplace", "Other"],
+        },
+        {
+          q: "Select your wall type",
+          a: ["Drywall or wood", "Brick", "Concrete", "Other"],
+        },
+      ]
 
     default:
       break

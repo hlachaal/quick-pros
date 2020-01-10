@@ -5,17 +5,17 @@ import bookingStyles from "../../pages/booking.module.scss"
 class Service extends Component {
   renderQuestion() {
     switch (this.props.serviceType) {
-      case "appliance":
+      case "appliance repair":
         return "Select the appliance you want to repair"
-      case "tv":
+      case "tv mounting":
         return "What size is your TV?"
-      case "furniture":
+      case "furniture assembly":
         return "Choose a service to get started"
-      case "handyman":
+      case "handyman services":
         return "Choose a service to get started"
-      case "iphone":
+      case "iphone repair":
         return "Select your iPhone model"
-      case "moving":
+      case "heavy lifting":
         return "Approximately how long time the task would take?"
       default:
         return null
@@ -23,7 +23,7 @@ class Service extends Component {
   }
   renderServices() {
     switch (this.props.serviceType) {
-      case "appliance":
+      case "appliance repair":
         return (
           <div className={bookingStyles.serviceList}>
             <button
@@ -76,158 +76,162 @@ class Service extends Component {
             </button>
           </div>
         )
-      case "tv":
+      case "tv mounting":
         return (
           <div className={bookingStyles.serviceList}>
             <button
-              onClick={() => this.props.onSelectService("up31")}
+              onClick={() => this.props.onSelectService('up to 31"')}
               className={bookingStyles.listItem}
             >
               Up to 31"
             </button>
             <button
-              onClick={() => this.props.onSelectService("3280")}
+              onClick={() => this.props.onSelectService('32" - 60"')}
               className={bookingStyles.listItem}
             >
               32" - 60"
             </button>
             <button
-              onClick={() => this.props.onSelectService("6180")}
+              onClick={() => this.props.onSelectService('61" - 80"')}
               className={bookingStyles.listItem}
             >
               61" - 80"
             </button>
             <button
-              onClick={() => this.props.onSelectService("over81")}
+              onClick={() => this.props.onSelectService('over 81"')}
               className={bookingStyles.listItem}
             >
               Over 81"
             </button>
           </div>
         )
-      case "furniture":
+      case "furniture assembly":
         return (
           <div className={bookingStyles.serviceList}>
             <button
-              onClick={() => this.props.onSelectService("ikea")}
+              onClick={() =>
+                this.props.onSelectService("IKEA furniture items only")
+              }
               className={bookingStyles.listItem}
             >
               IKEA furniture items only
             </button>
             <button
-              onClick={() => this.props.onSelectService("other")}
+              onClick={() =>
+                this.props.onSelectService("other furniture items (non-IKEA)")
+              }
               className={bookingStyles.listItem}
             >
               Other furniture items (non-IKEA)
             </button>
             <button
-              onClick={() => this.props.onSelectService("both")}
+              onClick={() =>
+                this.props.onSelectService("both IKEA and non-IKEA furniture")
+              }
               className={bookingStyles.listItem}
             >
               Both IKEA and non-IKEA furniture
             </button>
           </div>
         )
-      case "handyman":
+      case "handyman services":
         return (
           <div className={bookingStyles.serviceList}>
             <button
-              onClick={() => this.props.onSelectService("applianceInstall")}
+              onClick={() => this.props.onSelectService("appliance install")}
               className={bookingStyles.listItem}
             >
               Appliance install
             </button>
             <button
-              onClick={() => this.props.onSelectService("drywallRepair")}
+              onClick={() => this.props.onSelectService("drywall repair")}
               className={bookingStyles.listItem}
             >
               Drywall repair
             </button>
             <button
-              onClick={() => this.props.onSelectService("electricalServices")}
+              onClick={() => this.props.onSelectService("electrical services")}
               className={bookingStyles.listItem}
             >
               Electrical services
             </button>
             <button
-              onClick={() => this.props.onSelectService("fanInstall")}
+              onClick={() => this.props.onSelectService("fan install")}
               className={bookingStyles.listItem}
             >
               Fan install
             </button>
             <button
-              onClick={() => this.props.onSelectService("furnitureAssembly")}
-              className={bookingStyles.listItem}
-            >
-              Furniture assembly
-            </button>
-            <button
-              onClick={() => this.props.onSelectService("gutterCleaning")}
+              onClick={() => this.props.onSelectService("gutter cleaning")}
               className={bookingStyles.listItem}
             >
               Gutter cleaning
             </button>
             <button
-              onClick={() => this.props.onSelectService("hardwareInstallation")}
+              onClick={() =>
+                this.props.onSelectService("hardware installation")
+              }
               className={bookingStyles.listItem}
             >
               Hardware installation
             </button>
             <button
-              onClick={() => this.props.onSelectService("interiorPainting")}
+              onClick={() => this.props.onSelectService("interior painting")}
               className={bookingStyles.listItem}
             >
               Interior painting
             </button>
             <button
-              onClick={() => this.props.onSelectService("lightInstall")}
+              onClick={() => this.props.onSelectService("light install")}
               className={bookingStyles.listItem}
             >
               Light install
             </button>
             <button
-              onClick={() => this.props.onSelectService("wallHanging")}
+              onClick={() => this.props.onSelectService("wall hanging")}
               className={bookingStyles.listItem}
             >
               Wall hanging
             </button>
             <button
-              onClick={() => this.props.onSelectService("other")}
+              onClick={() =>
+                this.props.onSelectService("other handyman services")
+              }
               className={bookingStyles.listItem}
             >
               Other handyman services
             </button>
           </div>
         )
-      case "iphone":
+      case "iphone repair":
         return (
           <div className={bookingStyles.serviceList}>
             <button
-              onClick={() => this.props.onSelectService("xsmax")}
+              onClick={() => this.props.onSelectService("XS Max")}
               className={bookingStyles.listItem}
             >
               XS Max
             </button>
             <button
-              onClick={() => this.props.onSelectService("xr")}
+              onClick={() => this.props.onSelectService("XR")}
               className={bookingStyles.listItem}
             >
               XR
             </button>
             <button
-              onClick={() => this.props.onSelectService("xs")}
+              onClick={() => this.props.onSelectService("XS")}
               className={bookingStyles.listItem}
             >
               XS
             </button>
             <button
-              onClick={() => this.props.onSelectService("x")}
+              onClick={() => this.props.onSelectService("X")}
               className={bookingStyles.listItem}
             >
               X
             </button>
             <button
-              onClick={() => this.props.onSelectService("8plus")}
+              onClick={() => this.props.onSelectService("8 Plus")}
               className={bookingStyles.listItem}
             >
               8 Plus
@@ -239,7 +243,7 @@ class Service extends Component {
               8
             </button>
             <button
-              onClick={() => this.props.onSelectService("7plus")}
+              onClick={() => this.props.onSelectService("7 Plus")}
               className={bookingStyles.listItem}
             >
               7 Plus
@@ -251,7 +255,7 @@ class Service extends Component {
               7
             </button>
             <button
-              onClick={() => this.props.onSelectService("6splus")}
+              onClick={() => this.props.onSelectService("6s Plus")}
               className={bookingStyles.listItem}
             >
               6s Plus
@@ -263,7 +267,7 @@ class Service extends Component {
               6s
             </button>
             <button
-              onClick={() => this.props.onSelectService("6plus")}
+              onClick={() => this.props.onSelectService("6 Plus")}
               className={bookingStyles.listItem}
             >
               6 Plus
@@ -276,23 +280,23 @@ class Service extends Component {
             </button>
           </div>
         )
-      case "moving":
+      case "heavy lifting":
         return (
           <div className={bookingStyles.serviceList}>
             <button
-              onClick={() => this.props.onSelectService("upto1")}
+              onClick={() => this.props.onSelectService("up to 1 hr")}
               className={bookingStyles.listItem}
             >
               Up to 1 hr
             </button>
             <button
-              onClick={() => this.props.onSelectService("23")}
+              onClick={() => this.props.onSelectService("2-3 hr")}
               className={bookingStyles.listItem}
             >
               2-3 hr
             </button>
             <button
-              onClick={() => this.props.onSelectService("4")}
+              onClick={() => this.props.onSelectService("4+ hr")}
               className={bookingStyles.listItem}
             >
               4+ hr

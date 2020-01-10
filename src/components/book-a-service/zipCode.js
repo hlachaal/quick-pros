@@ -43,6 +43,9 @@ class ZipCode extends Component {
     const style = {
       display: this.state.buttonDisabled ? "none" : "inline-block",
     }
+    const style2 = {
+      display: this.state.buttonDisabled ? "none" : "block",
+    }
     return (
       <Fragment>
         <div className={bookingStyles.question}>
@@ -61,7 +64,7 @@ class ZipCode extends Component {
 
           <p className={bookingStyles.err}>{this.state.err}</p>
           <button
-            disabled={this.state.buttonDisabled}
+            style={style2}
             onClick={() => {
               this.props.onSelectZipCode(this.state.zipCode)
             }}

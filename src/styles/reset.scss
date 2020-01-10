@@ -592,3 +592,16 @@ input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
+.google-places-autocomplete__suggestions-container {
+  position: absolute;
+  background: cornsilk;
+  width: 50%;
+  margin-top: -40px;
+}
+.google-places-autocomplete__suggestion {
+  line-height: 2em;
+}
+.google-places-autocomplete__suggestion:hover {
+  cursor: pointer;
+}

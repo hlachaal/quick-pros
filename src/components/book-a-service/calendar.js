@@ -8,10 +8,10 @@ import moment from "moment"
 import "react-datepicker/dist/react-datepicker.css"
 
 class Calendar extends Component {
-  constructor(props) {
-    super(props)
-  }
   render() {
+    const style = {
+      display: this.props.errDate !== "" ? "none" : "block",
+    }
     return (
       <Fragment>
         <div className={bookingStyles.question}>
@@ -32,10 +32,7 @@ class Calendar extends Component {
         </div>
         <div className={bookingStyles.ctrl}>
           <p className={bookingStyles.err}>{this.props.errDate}</p>
-          <button
-            disabled={this.props.errDate !== "" ? true : false}
-            onClick={this.props.onSelectDate}
-          >
+          <button style={style} onClick={this.props.onSelectDate}>
             Continue
           </button>
         </div>

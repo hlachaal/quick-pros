@@ -17,147 +17,127 @@ class ServiceType extends Component {
         <div className={bookingStyles.pageHead}>
           <h1>Connect with your local maintenance pro</h1>
 
-          <p>Which service do tou need?</p>
+          <p>Which service do you need?</p>
         </div>
         <section className={bookingStyles.services}>
-          <div className={bookingStyles.serviceContainer}>
-            <button
-              onClick={() =>
-                this.props.onSelectServiceType("handyman services")
-              }
-              className={bookingStyles.serviceWrapper}
-            >
-              <div className={bookingStyles.imageContainer}>
-                <img
-                  alt="Handyman services"
-                  className={bookingStyles.serviceImage}
-                  src={handyman}
-                />
-              </div>
-              <div className={bookingStyles.serviceTitle}>
-                <p>Handyman</p>
-                <p>Services</p>
-              </div>
-            </button>
-          </div>
+          <button
+            className={bookingStyles.serviceContainer}
+            onClick={() => this.props.onSelectServiceType("handyman services")}
+          >
+            <div className={bookingStyles.imageContainer}>
+              <img
+                alt="Handyman services"
+                className={bookingStyles.serviceImage}
+                src={handyman}
+              />
+            </div>
+            <div className={bookingStyles.serviceTitle}>
+              <p>Handyman</p>
+              <p>Services</p>
+            </div>
+          </button>
 
-          <div className={bookingStyles.serviceContainer}>
-            <button
-              onClick={() => this.props.onSelectServiceType("appliance repair")}
-              className={bookingStyles.serviceWrapper}
-            >
-              <div className={bookingStyles.imageContainer}>
-                <img
-                  alt="appliance install and repair"
-                  className={bookingStyles.serviceImage}
-                  src={appliance}
-                />
-              </div>
-              <div className={bookingStyles.serviceTitle}>
-                <p>Appliance</p>
-                <p>Repair</p>
-              </div>
-            </button>
-          </div>
+          <button
+            onClick={() => this.props.onSelectServiceType("appliance repair")}
+            className={bookingStyles.serviceContainer}
+          >
+            <div className={bookingStyles.imageContainer}>
+              <img
+                alt="appliance install and repair"
+                className={bookingStyles.serviceImage}
+                src={appliance}
+              />
+            </div>
+            <div className={bookingStyles.serviceTitle}>
+              <p>Appliance</p>
+              <p>Repair</p>
+            </div>
+          </button>
 
-          <div className={bookingStyles.serviceContainer}>
-            <button
-              onClick={() => this.props.onSelectServiceType("tv mounting")}
-              className={bookingStyles.serviceWrapper}
-            >
-              <div className={bookingStyles.imageContainer}>
-                <img
-                  alt="TV mounting"
-                  className={bookingStyles.serviceImage}
-                  src={tv}
-                />
-              </div>
-              <div className={bookingStyles.serviceTitle}>
-                <p>TV</p>
-                <p>Mounting</p>
-              </div>
-            </button>
-          </div>
+          <button
+            onClick={() => this.props.onSelectServiceType("tv mounting")}
+            className={bookingStyles.serviceContainer}
+          >
+            <div className={bookingStyles.imageContainer}>
+              <img
+                alt="TV mounting"
+                className={bookingStyles.serviceImage}
+                src={tv}
+              />
+            </div>
+            <div className={bookingStyles.serviceTitle}>
+              <p>TV</p>
+              <p>Mounting</p>
+            </div>
+          </button>
 
-          <div className={bookingStyles.serviceContainer}>
-            <button
-              onClick={() => this.props.onSelectServiceType("iphone repair")}
-              className={bookingStyles.serviceWrapper}
-            >
-              <div className={bookingStyles.imageContainer}>
-                <img
-                  alt="iPhone repair"
-                  className={bookingStyles.serviceImage}
-                  src={iPhone}
-                />
-              </div>
-              <div className={bookingStyles.serviceTitle}>
-                <p>iPhone</p>
-                <p>Repair</p>
-              </div>
-            </button>
-          </div>
+          <button
+            onClick={() => this.props.onSelectServiceType("iphone repair")}
+            className={bookingStyles.serviceContainer}
+          >
+            <div className={bookingStyles.imageContainer}>
+              <img
+                alt="iPhone repair"
+                className={bookingStyles.serviceImage}
+                src={iPhone}
+              />
+            </div>
+            <div className={bookingStyles.serviceTitle}>
+              <p>iPhone</p>
+              <p>Repair</p>
+            </div>
+          </button>
 
-          <div className={bookingStyles.serviceContainer}>
-            <button
-              onClick={() =>
-                this.props.onSelectServiceType("cleaning services")
-              }
-              className={bookingStyles.serviceWrapper}
-            >
-              <div className={bookingStyles.imageContainer}>
-                <img
-                  alt="Cleaning Services"
-                  className={bookingStyles.serviceImage}
-                  src={cleaning}
-                />
-              </div>
-              <div className={bookingStyles.serviceTitle}>
-                <p>Cleaning</p>
-                <p>Services</p>
-              </div>
-            </button>
-          </div>
+          <button
+            onClick={() => this.props.onSelectServiceType("cleaning services")}
+            className={bookingStyles.serviceContainer}
+          >
+            <div className={bookingStyles.imageContainer}>
+              <img
+                alt="Cleaning Services"
+                className={bookingStyles.serviceImage}
+                src={cleaning}
+              />
+            </div>
+            <div className={bookingStyles.serviceTitle}>
+              <p>Cleaning</p>
+              <p>Services</p>
+            </div>
+          </button>
 
-          <div className={bookingStyles.serviceContainer}>
-            <button
-              onClick={() => this.props.onSelectServiceType("heavy lifting")}
-              className={bookingStyles.serviceWrapper}
-            >
-              <div className={bookingStyles.imageContainer}>
-                <img
-                  alt="Moving and hauling"
-                  className={bookingStyles.serviceImage}
-                  src={moving}
-                />
-              </div>
-              <div className={bookingStyles.serviceTitle}>
-                <p>Heavy</p>
-                <p>Lifting</p>
-              </div>
-            </button>
-          </div>
+          <button
+            onClick={() => this.props.onSelectServiceType("heavy lifting")}
+            className={bookingStyles.serviceContainer}
+          >
+            <div className={bookingStyles.imageContainer}>
+              <img
+                alt="Moving and hauling"
+                className={bookingStyles.serviceImage}
+                src={moving}
+              />
+            </div>
+            <div className={bookingStyles.serviceTitle}>
+              <p>Heavy</p>
+              <p>Lifting</p>
+            </div>
+          </button>
 
-          <div className={bookingStyles.serviceContainer}>
-            <button
-              onClick={() =>
-                this.props.onSelectServiceType("furniture assembly")
-              }
-              className={bookingStyles.serviceWrapper}
-            >
-              <div className={bookingStyles.imageContainer}>
-                <img
-                  alt="Furniture assembly and delivery"
-                  className={bookingStyles.serviceImage}
-                  src={furniture}
-                />
-              </div>
-              <div className={bookingStyles.serviceTitle}>
-                <p>Furniture</p>
-                <p>Assembly</p>
-              </div>
-            </button>
-          </div>
+          <button
+            onClick={() => this.props.onSelectServiceType("furniture assembly")}
+            className={bookingStyles.serviceContainer}
+          >
+            <div className={bookingStyles.imageContainer}>
+              <img
+                alt="Furniture assembly and delivery"
+                className={bookingStyles.serviceImage}
+                src={furniture}
+              />
+            </div>
+            <div className={bookingStyles.serviceTitle}>
+              <p>Furniture</p>
+              <p>Assembly</p>
+            </div>
+          </button>
         </section>
       </Fragment>
     )

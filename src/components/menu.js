@@ -6,7 +6,7 @@ import menuStyles from "./menu.module.scss"
 const Menu = props => {
   return (
     <nav className={menuStyles.menu}>
-      <ul className={menuStyles.navList}>
+      {/* <ul className={menuStyles.navList}>
         <li>
           <Link
             className={menuStyles.navItem}
@@ -43,16 +43,6 @@ const Menu = props => {
             Book a Service
           </Link>
         </li>
-        {/* <li>
-          <Link
-            className={menuStyles.navItem}
-            activeClassName={menuStyles.activeNavItem}
-            partiallyActive={true}
-            to="/blog"
-          >
-            Blog
-          </Link>
-        </li> */}
         <li>
           <Link
             className={menuStyles.navItem}
@@ -62,7 +52,7 @@ const Menu = props => {
             Contact
           </Link>
         </li>
-      </ul>
+      </ul> */}
     </nav>
   )
 }

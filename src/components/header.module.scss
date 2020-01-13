@@ -36,7 +36,7 @@ header {
     li {
       margin-left: 1rem;
       a {
-        color: #5692d8;
+        color: #235197;
         width: 30px;
         height: 30px;
         line-height: 30px;
@@ -48,7 +48,7 @@ header {
       }
       a:hover {
         color: #fff;
-        background: #5692d8;
+        background: #235197;
       }
     }
   }
@@ -73,12 +73,12 @@ header {
   flex: 1;
 }
 .nav-item:hover {
-  color: #5692d8;
+  color: #235197;
 
   font-weight: 600;
 }
 .active-nav-item {
-  color: #5692d8;
+  color: #235197;
 
   font-weight: 600;
 }

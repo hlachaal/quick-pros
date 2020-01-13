@@ -605,3 +605,10 @@ input[type="number"]::-webkit-outer-spin-button {
 .google-places-autocomplete__suggestion:hover {
   cursor: pointer;
 }
+.react-datepicker__time-container
+  .react-datepicker__time
+  .react-datepicker__time-box
+  ul.react-datepicker__time-list
+  li.react-datepicker__time-list-item {
+  padding: 5px 5px !important;
+}

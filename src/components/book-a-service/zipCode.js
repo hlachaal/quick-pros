@@ -25,7 +25,7 @@ class ZipCode extends Component {
       } else {
         this.setState({
           zipCode: "",
-          err: "sorry, we are not in your area yet.",
+          err: "sorry, we are not in your area.",
           buttonDisabled: true,
         })
       }
@@ -48,8 +48,10 @@ class ZipCode extends Component {
     }
     return (
       <Fragment>
-        <div className={bookingStyles.question}>
-          <p>Check if we’re available in your area</p>
+        <div className={bookingStyles.pageHead}>
+          <h1>Check if we’re available in your area</h1>
+
+          <p>What's your zip code?</p>
         </div>
         <section className={bookingStyles.zipCodeForm}>
           <div>

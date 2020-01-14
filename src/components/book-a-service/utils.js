@@ -254,6 +254,64 @@ export function getQuestions(name) {
         },
       ]
 
+    case "appliance install":
+      return [
+        {
+          q: "What type of appliance do you need to install/replace?",
+          a: [
+            "Cooktop installation",
+            "Dishwasher replacement",
+            "Dryer installation / replacement",
+            "Garbage disposal installation",
+            "Over-the-range microwave oven installation",
+            "Refrigerator installation",
+            "Stove replacement",
+            "Wall oven replacement",
+            "Washing machine installation / replacement",
+          ],
+        },
+        {
+          q: "Is this a first-time installation or replacement?",
+          a: ["First - time", "Replacement"],
+        },
+        {
+          q: "What is the fuel source for the cooktop?",
+          a: [
+            "Electric - hard wired",
+            "Electric - plug",
+            "Natural gas",
+            "Propane gas",
+          ],
+        },
+        {
+          q: "Is wiring or gas available at the installation location?",
+          a: ["Existing source", "New source"],
+        },
+      ]
+
+    case "drywall repair":
+      return [
+        {
+          q: "How many areas of drywall are damaged?",
+          a: [
+            {
+              option: "Number of minor areas",
+              description: "1 - 6 inches wide",
+              number: 0,
+            },
+            {
+              option: "Number of minor areas",
+              description: "1 - 6 inches wide",
+              number: 0,
+            },
+          ],
+        },
+        {
+          q: "Is wiring or gas available at the installation location?",
+          a: ["Existing source", "New source"],
+        },
+      ]
+
     default:
       break
   }

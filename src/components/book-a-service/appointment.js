@@ -16,9 +16,9 @@ class Appointment extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      serviceTypeSelected: false,
+      serviceTypeSelected: true,
       zipCode: 0,
-      zipCodeSelected: false,
+      zipCodeSelected: true,
       serviceSelected: false,
       detailsSelected: false,
       commentSelected: false,
@@ -27,7 +27,7 @@ class Appointment extends Component {
       cuInfoSelected: false,
       detailsReviewed: false,
       allServiceInfo: {
-        serviceType: "",
+        serviceType: "handyman services",
         service: {
           name: "",
           questions: [],
@@ -113,6 +113,7 @@ class Appointment extends Component {
       !this.state.detailsSelected
     ) {
       const questions = getQuestions(this.state.allServiceInfo.service.name)
+      console.log(questions)
 
       const screens =
         questions.length - this.state.allServiceInfo.service.questions.length

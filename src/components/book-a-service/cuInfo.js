@@ -12,7 +12,7 @@ class CuInfo extends Component {
         <div className={bookingStyles.question}>
           <p>Where can we send the appointment updates?</p>
         </div>
-        <div className={bookingStyles.formWrapper}>
+        <div className={bookingStyles.commentForm}>
           <input
             onChange={this.props.onUpdateInput}
             value={this.props.customerInfo.fname}

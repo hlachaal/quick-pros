@@ -34,6 +34,8 @@
 }
 .service-container:hover {
   border: 1px solid #235197;
+  box-shadow: none;
+  color: #235197;
 }
 .service-wrapper {
 }
@@ -88,6 +90,8 @@
 }
 .list-item:hover {
   border: 1px solid #235197;
+  box-shadow: none;
+  color: #235197;
 }
 .zip-code-form {
   div {
@@ -134,14 +138,21 @@
   margin: auto;
   display: flex;
   flex-direction: column;
+  input {
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0 0 40px 0;
+  }
   textarea {
     width: 100%;
     margin: auto;
     padding: 10px;
     border-radius: 5px;
+    margin-bottom: 40px;
   }
   button {
-    margin-top: 40px;
     border-radius: 5px;
     padding: 10px;
     border: none;
@@ -149,10 +160,16 @@
     color: white;
     cursor: pointer;
     width: 200px;
-    margin: 40px auto;
+    margin: auto;
   }
   button:hover {
     background: #4478bf;
+  }
+  .err {
+    color: red;
+    position: absolute;
+    margin-top: -35px;
+    margin-left: 75px;
   }
 }
 .calender {

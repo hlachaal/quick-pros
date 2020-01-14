@@ -14,7 +14,7 @@ class Address extends Component {
         <div className={bookingStyles.question}>
           <p>What's your address?</p>
         </div>
-        <div className={bookingStyles.formWrapper}>
+        <div className={bookingStyles.commentForm}>
           <div>
             <GooglePlacesAutocomplete
               onSelect={e => {

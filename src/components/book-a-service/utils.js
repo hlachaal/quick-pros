@@ -192,7 +192,7 @@ export function getQuestions(name) {
         },
       ]
 
-    case 'up to 31"' || '32" - 60"' || '61" - 80"' || 'over 81"':
+    case 'up to 31"':
       return [
         {
           q: "Select bracket type",
@@ -297,18 +297,20 @@ export function getQuestions(name) {
             {
               option: "Number of minor areas",
               description: "1 - 6 inches wide",
-              number: 0,
             },
             {
-              option: "Number of minor areas",
-              description: "1 - 6 inches wide",
-              number: 0,
+              option: "Number of major areas",
+              description: "7 - 12 inches wide",
             },
           ],
         },
         {
-          q: "Is wiring or gas available at the installation location?",
-          a: ["Existing source", "New source"],
+          q: "Where do you need the repair?",
+          a: ["Wall", "Ceiling", "Both (Wall & Ceiling)"],
+        },
+        {
+          q: "Will the handyman need a ladder?",
+          a: ["No", "Yes - step ladder", "Yes - extension ladder"],
         },
       ]
 

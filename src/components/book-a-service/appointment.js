@@ -113,7 +113,7 @@ class Appointment extends Component {
       !this.state.detailsSelected
     ) {
       const questions = getQuestions(this.state.allServiceInfo.service.name)
-      console.log(questions)
+      //console.log(questions)
 
       const screens =
         questions.length - this.state.allServiceInfo.service.questions.length

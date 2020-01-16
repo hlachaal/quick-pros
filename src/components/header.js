@@ -36,7 +36,7 @@ const Header = ({ siteTitle }) => {
               >
                 Pricing
               </Link>
-            </li> */}
+            </li> 
             <li>
               <Link
                 className={headerStyles.navItem}
@@ -46,7 +46,7 @@ const Header = ({ siteTitle }) => {
                 Book a Service
               </Link>
             </li>
-            {/* <li>
+             <li>
               <Link
                 className={headerStyles.navItem}
                 activeClassName={headerStyles.activeNavItem}

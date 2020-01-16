@@ -16,9 +16,9 @@ class Appointment extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      serviceTypeSelected: true,
+      serviceTypeSelected: false,
       zipCode: 0,
-      zipCodeSelected: true,
+      zipCodeSelected: false,
       serviceSelected: false,
       detailsSelected: false,
       commentSelected: false,

@@ -19,7 +19,7 @@ const Header = ({ siteTitle }) => {
         <nav>
           <input type="checkbox" id="toggle" />
           <ul className={headerStyles.navList}>
-            <li>
+            {/* <li>
               <Link
                 className={headerStyles.navItem}
                 activeClassName={headerStyles.activeNavItem}
@@ -36,7 +36,7 @@ const Header = ({ siteTitle }) => {
               >
                 Pricing
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link
                 className={headerStyles.navItem}
@@ -46,7 +46,7 @@ const Header = ({ siteTitle }) => {
                 Book a Service
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link
                 className={headerStyles.navItem}
                 activeClassName={headerStyles.activeNavItem}
@@ -63,7 +63,7 @@ const Header = ({ siteTitle }) => {
               >
                 Contact
               </Link>
-            </li>
+            </li> */}
           </ul>
         </nav>
       </div>

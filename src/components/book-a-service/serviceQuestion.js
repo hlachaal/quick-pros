@@ -21,21 +21,33 @@ class ServiceQuestion extends Component {
           </button>
         )
       } else {
-        console.log(answer)
-        return (
-          <div key={answer.option} className={bookingStyles.objAnswer}>
-            <div className={bookingStyles.option}>{answer.option}</div>
-            <div className={bookingStyles.number}>
-              <span className={bookingStyles.manus}>-</span>
-              <span className={bookingStyles.nbr}>0</span>
-              <span className={bookingStyles.plus}>+</span>
+        if (answer.description) {
+          return (
+            <div key={answer.option} className={bookingStyles.objAnswer}>
+              <div className={bookingStyles.option}>{answer.option}</div>
+              <div className={bookingStyles.number}>
+                <span className={bookingStyles.manus}>-</span>
+                <span className={bookingStyles.nbr}>0</span>
+                <span className={bookingStyles.plus}>+</span>
+              </div>
+              <hr />
+              <div className={bookingStyles.description}>
+                {answer.description}
+              </div>
             </div>
-            <hr />
-            <div className={bookingStyles.description}>
-              {answer.description}
+          )
+        } else {
+          return (
+            <div key={answer.option} className={bookingStyles.objAnswer}>
+              <div className={bookingStyles.option}>{answer.option}</div>
+              <div className={bookingStyles.number}>
+                <span className={bookingStyles.manus}>-</span>
+                <span className={bookingStyles.nbr}>0</span>
+                <span className={bookingStyles.plus}>+</span>
+              </div>
             </div>
-          </div>
-        )
+          )
+        }
       }
     })
     return res

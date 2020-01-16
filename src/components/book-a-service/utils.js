@@ -314,6 +314,35 @@ export function getQuestions(name) {
         },
       ]
 
+    case "electrical services":
+      return [
+        {
+          q: "Tell us about the job",
+          a: [
+            {
+              option: "Light switch replacement",
+            },
+            {
+              option: "Outlet replacement",
+            },
+            {
+              option: "Electrical outlets installation",
+            },
+            {
+              option: "USB wall outlet installation",
+            },
+            {
+              option: "Device installation",
+              description: "Heaters, Bathroom Fan, Heated toilet seats",
+            },
+          ],
+        },
+        {
+          q: "Select your wall type",
+          a: ["Drywall or wood", "Brick", "Concrete", "Other"],
+        },
+      ]
+
     default:
       break
   }

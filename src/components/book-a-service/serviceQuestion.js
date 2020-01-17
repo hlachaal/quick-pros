@@ -24,14 +24,17 @@ class ServiceQuestion extends Component {
         if (answer.description) {
           return (
             <div key={answer.option} className={bookingStyles.objAnswer}>
-              <div className={bookingStyles.option}>{answer.option}</div>
-              <div className={bookingStyles.number}>
-                <span className={bookingStyles.manus}>-</span>
-                <span className={bookingStyles.nbr}>0</span>
-                <span className={bookingStyles.plus}>+</span>
+              <div className={bookingStyles.optionNbr}>
+                <div className={bookingStyles.option}>{answer.option}</div>
+                <div className={bookingStyles.number}>
+                  <button className={bookingStyles.manus}>-</button>
+                  <span className={bookingStyles.nbr}>0</span>
+                  <button className={bookingStyles.plus}>+</button>
+                </div>
               </div>
-              <hr />
+
               <div className={bookingStyles.description}>
+                <hr />
                 {answer.description}
               </div>
             </div>
@@ -39,11 +42,13 @@ class ServiceQuestion extends Component {
         } else {
           return (
             <div key={answer.option} className={bookingStyles.objAnswer}>
-              <div className={bookingStyles.option}>{answer.option}</div>
-              <div className={bookingStyles.number}>
-                <span className={bookingStyles.manus}>-</span>
-                <span className={bookingStyles.nbr}>0</span>
-                <span className={bookingStyles.plus}>+</span>
+              <div className={bookingStyles.optionNbr}>
+                <div className={bookingStyles.option}>{answer.option}</div>
+                <div className={bookingStyles.number}>
+                  <button className={bookingStyles.manus}>-</button>
+                  <span className={bookingStyles.nbr}>0</span>
+                  <button className={bookingStyles.plus}>+</button>
+                </div>
               </div>
             </div>
           )

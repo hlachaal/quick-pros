@@ -18,7 +18,7 @@ class Appointment extends Component {
     this.state = {
       serviceTypeSelected: false,
       zipCode: 0,
-      zipCodeSelected: false,
+      zipCodeSelected: true,
       serviceSelected: false,
       detailsSelected: false,
       commentSelected: false,
@@ -150,6 +150,16 @@ class Appointment extends Component {
           service: service,
         },
       })
+    }
+  }
+
+  multiItemsUpdate = method => {
+    switch (method) {
+      case "":
+        break
+
+      default:
+        break
     }
   }
   renderComment() {

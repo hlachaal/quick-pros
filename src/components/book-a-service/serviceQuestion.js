@@ -21,38 +21,24 @@ class ServiceQuestion extends Component {
           </button>
         )
       } else {
-        if (answer.description) {
-          return (
-            <div key={answer.option} className={bookingStyles.objAnswer}>
-              <div className={bookingStyles.optionNbr}>
-                <div className={bookingStyles.option}>{answer.option}</div>
-                <div className={bookingStyles.number}>
-                  <button className={bookingStyles.manus}>-</button>
-                  <span className={bookingStyles.nbr}>0</span>
-                  <button className={bookingStyles.plus}>+</button>
-                </div>
+        return (
+          <div key={answer.option} className={bookingStyles.objAnswer}>
+            <div className={bookingStyles.optionNbr}>
+              <div className={bookingStyles.option}>{answer.option}</div>
+              <div className={bookingStyles.number}>
+                <button className={bookingStyles.manus}>-</button>
+                <span className={bookingStyles.nbr}>0</span>
+                <button className={bookingStyles.plus}>+</button>
               </div>
-
+            </div>
+            {answer.description && (
               <div className={bookingStyles.description}>
                 <hr />
                 {answer.description}
               </div>
-            </div>
-          )
-        } else {
-          return (
-            <div key={answer.option} className={bookingStyles.objAnswer}>
-              <div className={bookingStyles.optionNbr}>
-                <div className={bookingStyles.option}>{answer.option}</div>
-                <div className={bookingStyles.number}>
-                  <button className={bookingStyles.manus}>-</button>
-                  <span className={bookingStyles.nbr}>0</span>
-                  <button className={bookingStyles.plus}>+</button>
-                </div>
-              </div>
-            </div>
-          )
-        }
+            )}
+          </div>
+        )
       }
     })
     return res

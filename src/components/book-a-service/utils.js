@@ -2,7 +2,6 @@ export function getQuestions(name) {
   switch (name) {
     case "refrigerator":
       return [
-        { q: "Is your refrigerator built-in?", a: ["yes", "no"] },
         {
           q: "What's the brand of the refrigerator?",
           a: [
@@ -15,6 +14,7 @@ export function getQuestions(name) {
             "Other",
           ],
         },
+        { q: "Is your refrigerator built-in?", a: ["yes", "no"] },
         {
           q: "Select the issue",
           a: [

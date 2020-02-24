@@ -113,8 +113,6 @@ class Appointment extends Component {
       !this.state.detailsSelected
     ) {
       const questions = getQuestions(this.state.allServiceInfo.service.name)
-      //console.log(questions)
-
       const screens =
         questions.length - this.state.allServiceInfo.service.questions.length
       if (screens > 0) {
@@ -125,6 +123,8 @@ class Appointment extends Component {
             answers={questions[current].a}
             screens={screens}
             answerToQuestion={this.answerToQuestion}
+            onUpdateItem={this.updateItem}
+            prevAnswers={this.state.allServiceInfo.service.answers}
           />
         )
       }
@@ -151,6 +151,31 @@ class Appointment extends Component {
         },
       })
     }
+  }
+  updateItem = (answer, method) => {
+    let answers = this.state.allServiceInfo.service.answers
+    if (method === "add") answers.push(answer)
+    if (method === "remove") {
+      let a = answer.option
+      let newA = answers.map(ans => {
+        if (ans.option === a) {
+          a = ""
+          return null
+        } else return ans
+      })
+      answers = newA.filter(a => {
+        return a !== null
+      })
+    }
+    this.setState({
+      allServiceInfo: {
+        ...this.state.allServiceInfo,
+        service: {
+          ...this.state.allServiceInfo.service,
+          answers: answers,
+        },
+      },
+    })
   }
 
   multiItemsUpdate = method => {

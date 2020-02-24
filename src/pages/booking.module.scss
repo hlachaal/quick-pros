@@ -72,6 +72,19 @@
     cursor: pointer;
     margin: 0 auto 20px auto;
   }
+  .continue {
+    border-radius: 5px;
+    padding: 10px;
+    border: none;
+    background: #235197;
+    color: white;
+    cursor: pointer;
+    width: 200px;
+    margin: auto;
+  }
+  .continue:hover {
+    background: #4478bf;
+  }
 }
 .list-item {
   box-shadow: 0 5px 14px 0 rgba(0, 0, 0, 0.2);

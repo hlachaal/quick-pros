@@ -342,6 +342,28 @@ export function getQuestions(name) {
           a: ["Drywall or wood", "Brick", "Concrete", "Other"],
         },
       ]
+    case "fan install":
+      return [
+        {
+          q: "How many fans will be installed?",
+          a: [
+            {
+              option: "Ceiling fans",
+            },
+            {
+              option: "Bathroom fans",
+            },
+          ],
+        },
+        {
+          q: "How high is your ceiling?",
+          a: ["Under 10 ft.", "10 to 14 ft.", "Above 14 ft."],
+        },
+        {
+          q: "Will the handyman need a ladder?",
+          a: ["No", "Yes - step ladder", "Yes - extension ladder"],
+        },
+      ]
 
     default:
       break

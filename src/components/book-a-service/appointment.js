@@ -122,13 +122,28 @@ class Appointment extends Component {
             question={questions[current].q}
             answers={questions[current].a}
             screens={screens}
+            prevQuestions={this.state.allServiceInfo.service.questions}
+            prevAnswers={this.state.allServiceInfo.service.answers}
             answerToQuestion={this.answerToQuestion}
             onUpdateItem={this.updateItem}
-            prevAnswers={this.state.allServiceInfo.service.answers}
+            onCloseMulti={this.closeMulti}
           />
         )
       }
     }
+  }
+  closeMulti = q => {
+    let questions = this.state.allServiceInfo.service.questions
+    questions.push(q)
+    this.setState({
+      allServiceInfo: {
+        ...this.state.allServiceInfo,
+        service: {
+          ...this.state.allServiceInfo.service,
+          questions,
+        },
+      },
+    })
   }
   answerToQuestion = (q, a, screens) => {
     const service = this.state.allServiceInfo.service
@@ -154,10 +169,14 @@ class Appointment extends Component {
   }
   updateItem = (answer, method) => {
     let answers = this.state.allServiceInfo.service.answers
-    if (method === "add") answers.push(answer)
+    if (method === "add") {
+      if (answers.length) answers[0].push(answer)
+      else answers.push([answer])
+    }
+
     if (method === "remove") {
       let a = answer.option
-      let newA = answers.map(ans => {
+      let newA = answers[0].map(ans => {
         if (ans.option === a) {
           a = ""
           return null
@@ -166,6 +185,7 @@ class Appointment extends Component {
       answers = newA.filter(a => {
         return a !== null
       })
+      answers = [answers]
     }
     this.setState({
       allServiceInfo: {
@@ -178,15 +198,6 @@ class Appointment extends Component {
     })
   }
 
-  multiItemsUpdate = method => {
-    switch (method) {
-      case "":
-        break
-
-      default:
-        break
-    }
-  }
   renderComment() {
     if (
       this.state.serviceTypeSelected &&

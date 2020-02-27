@@ -2,23 +2,19 @@ import React, { Component, Fragment } from "react"
 import bookingStyles from "../../pages/booking.module.scss"
 
 class ServiceQuestion extends Component {
-  constructor(props) {
-    super(props)
-    const multiItems = false
-  }
   renderQuantity(answer, pAnswers) {
-    if (pAnswers.length > 0) {
-      let qty = pAnswers.filter(pAnswer => {
+    if (pAnswers[0]) {
+      let qty = pAnswers[0].filter(pAnswer => {
         return pAnswer.option === answer
       })
       return qty.length
+    } else {
+      return 0
     }
-    return 0
   }
 
   renderAnswers(answers, prevAnswers) {
     const res = answers.map(answer => {
-      const quantity = this.renderQuantity(answer.option, prevAnswers)
       if (typeof answer === "string") {
         return (
           <button
@@ -35,8 +31,8 @@ class ServiceQuestion extends Component {
             {answer}
           </button>
         )
-      } else {
-        this.multiItems = true
+      } else if (typeof answer === "object") {
+        const quantity = this.renderQuantity(answer.option, prevAnswers)
         return (
           <div key={answer.option} className={bookingStyles.objAnswer}>
             <div className={bookingStyles.optionNbr}>
@@ -67,7 +63,7 @@ class ServiceQuestion extends Component {
             )}
           </div>
         )
-      }
+      } else console.log(typeof answer)
     })
     return res
   }
@@ -79,9 +75,16 @@ class ServiceQuestion extends Component {
         </div>
         <div className={bookingStyles.serviceList}>
           {this.renderAnswers(this.props.answers, this.props.prevAnswers)}
-          {this.multiItems && (
-            <button className={bookingStyles.continue}>Continue</button>
-          )}
+          {typeof this.props.prevAnswers[0] === "object" &&
+            this.props.prevAnswers[0].length > 0 &&
+            this.props.prevAnswers.length > this.props.prevQuestions.length && (
+              <button
+                onClick={() => this.props.onCloseMulti(this.props.question)}
+                className={bookingStyles.continue}
+              >
+                Continue
+              </button>
+            )}
         </div>
       </Fragment>
     )

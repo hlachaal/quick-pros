@@ -6,7 +6,7 @@ class cuComment extends Component {
     return (
       <Fragment>
         <div className={bookingStyles.question}>
-          <p>Please add a description</p>
+          <p>Describe the job in detail</p>
         </div>
         <div className={bookingStyles.commentForm}>
           <textarea

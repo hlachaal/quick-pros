@@ -74,6 +74,24 @@ class Service extends Component {
             >
               Microwave
             </button>
+            <button
+              onClick={() => this.props.onSelectService("range hood")}
+              className={bookingStyles.listItem}
+            >
+              Range hood
+            </button>
+            <button
+              onClick={() => this.props.onSelectService("trash compactor")}
+              className={bookingStyles.listItem}
+            >
+              Trash compactor
+            </button>
+            <button
+              onClick={() => this.props.onSelectService("washer dryer combo")}
+              className={bookingStyles.listItem}
+            >
+              Washer and dryer combo
+            </button>
           </div>
         )
       case "tv mounting":
@@ -162,6 +180,12 @@ class Service extends Component {
               Fan install
             </button>
             <button
+              onClick={() => this.props.onSelectService("furniture assembly")}
+              className={bookingStyles.listItem}
+            >
+              Furniture assembly
+            </button>
+            <button
               onClick={() => this.props.onSelectService("gutter cleaning")}
               className={bookingStyles.listItem}
             >
@@ -188,10 +212,24 @@ class Service extends Component {
               Light install
             </button>
             <button
+              onClick={() => this.props.onSelectService("tv mounting")}
+              className={bookingStyles.listItem}
+            >
+              TV mounting
+            </button>
+            <button
               onClick={() => this.props.onSelectService("wall hanging")}
               className={bookingStyles.listItem}
             >
               Wall hanging
+            </button>
+            <button
+              onClick={() =>
+                this.props.onSelectService("window treatment installation")
+              }
+              className={bookingStyles.listItem}
+            >
+              Window treatment installation
             </button>
             <button
               onClick={() =>

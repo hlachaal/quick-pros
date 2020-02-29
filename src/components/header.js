@@ -1,9 +1,13 @@
 import PropTypes from "prop-types"
 import React from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faYelp, faFacebook } from "@fortawesome/free-brands-svg-icons"
+import {
+  faYelp,
+  faFacebook,
+  faInstagram,
+} from "@fortawesome/free-brands-svg-icons"
 import { Link } from "gatsby"
-import logo from "../images/logo.svg"
+import logo from "../images/logo.png"
 
 import headerStyles from "./header.module.scss"
 
@@ -75,6 +79,11 @@ const Header = ({ siteTitle }) => {
           <li>
             <a href="https://yelp.com">
               <FontAwesomeIcon icon={faYelp} />
+            </a>
+          </li>
+          <li>
+            <a href="https://instagram.com">
+              <FontAwesomeIcon icon={faInstagram} />
             </a>
           </li>
           <li>

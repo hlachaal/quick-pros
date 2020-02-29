@@ -1,3 +1,8 @@
+body {
+  background: #1c77ac;
+
+  color: #ffffff;
+}
 .page-head {
   text-align: center;
   margin-top: 40px;
@@ -28,7 +33,6 @@
   border-radius: 5px;
   padding-bottom: 40px;
   padding-top: 40px;
-  background: transparent;
   cursor: pointer;
   box-shadow: 0 5px 14px 0 rgba(0, 0, 0, 0.2);
 }
@@ -54,7 +58,6 @@
   }
 }
 .question {
-  color: #4a4b4d;
   text-align: center;
   margin: 40px 0 60px 0;
   p {
@@ -67,20 +70,23 @@
   width: 50%;
   margin: auto;
   button {
-    background: transparent;
+    text-align: left;
     width: 400px;
     cursor: pointer;
     margin: 0 auto 20px auto;
+    img {
+      margin-bottom: 0;
+    }
   }
   .continue {
     border-radius: 5px;
     padding: 10px;
     border: none;
     background: #235197;
-    color: white;
     cursor: pointer;
     width: 200px;
     margin: 20px auto auto auto;
+    text-align: center;
   }
   .continue:hover {
     background: #4478bf;
@@ -96,7 +102,6 @@
   font-size: 18px;
   font-weight: 400;
   line-height: 1.28;
-  color: #4a4b4d;
   display: block;
   margin: 10px 0;
   width: 100%;
@@ -131,7 +136,6 @@
     padding: 10px;
     border: none;
     background: #235197;
-    color: white;
     cursor: pointer;
   }
   button:hover {
@@ -170,7 +174,6 @@
     padding: 10px;
     border: none;
     background: #235197;
-    color: white;
     cursor: pointer;
     width: 200px;
     margin: auto;
@@ -200,7 +203,6 @@
     padding: 10px;
     border: none;
     background: #235197;
-    color: white;
     cursor: pointer;
     display: block;
   }
@@ -233,7 +235,6 @@
     padding: 10px;
     border: none;
     background: #235197;
-    color: white;
     cursor: pointer;
     display: block;
   }
@@ -277,6 +278,7 @@
         border-radius: 15px;
         padding: 0;
         margin: 0;
+        text-align: center;
       }
       .manus {
         color: #4a4b4d;
@@ -296,7 +298,7 @@
 
   .description {
     font-size: 0.8em;
-    color: #4a4b4d;
+
     hr {
       margin-bottom: 10px;
     }

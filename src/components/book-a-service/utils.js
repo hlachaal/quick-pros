@@ -1,21 +1,32 @@
+import frigidaire from "../../images/brands/frigidaire.svg"
+import generalElectric from "../../images/brands/general-electric.svg"
+import lg from "../../images/brands/lg.svg"
+import maytag from "../../images/brands/maytag.svg"
+import whirlpool from "../../images/brands/whirlpool.svg"
+import samsung from "../../images/brands/samsung.svg"
+
+//Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
+
 export function getQuestions(name) {
   switch (name) {
     case "refrigerator":
       return [
         {
           q: "What's the brand of the refrigerator?",
-          /* a: [
-            "Samsung",
-            "LG",
-            "Whirlpool",
-            "General Electric",
-            "MAYTAG",
-            "Frigidaire",
-            "Other",
-          ], */
-          a: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+          // prettier-ignore
+          a: [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47]
         },
-        { q: "Is your refrigerator built-in?", a: ["yes", "no"] },
+        { q: "Is your refrigerator built-in?", a: ["Yes", "No"] },
+        {
+          q: "Select the issue",
+          a: [
+            "Not cooling",
+            "Ice maker not working",
+            "Leaking",
+            "Noisy",
+            "Other",
+          ],
+        },
         {
           q: "Select the issue",
           a: [
@@ -40,15 +51,8 @@ export function getQuestions(name) {
         },
         {
           q: "What's the brand of the dryer?",
-          a: [
-            "Samsung",
-            "LG",
-            "Whirlpool",
-            "General Electric",
-            "MAYTAG",
-            "Frigidaire",
-            "Other",
-          ],
+          // prettier-ignore
+          a: [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47]
         },
         {
           q: "Select the issue",
@@ -66,15 +70,8 @@ export function getQuestions(name) {
       return [
         {
           q: "What's the brand of the oven?",
-          a: [
-            "Samsung",
-            "LG",
-            "Whirlpool",
-            "General Electric",
-            "MAYTAG",
-            "Frigidaire",
-            "Other",
-          ],
+          // prettier-ignore
+          a: [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47]
         },
         {
           q: "Select the issue",
@@ -90,15 +87,8 @@ export function getQuestions(name) {
         },
         {
           q: "What's the brand of the washer?",
-          a: [
-            "Samsung",
-            "LG",
-            "Whirlpool",
-            "General Electric",
-            "MAYTAG",
-            "Frigidaire",
-            "Other",
-          ],
+          // prettier-ignore
+          a: [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47]
         },
         {
           q: "Select the issue",
@@ -117,15 +107,8 @@ export function getQuestions(name) {
       return [
         {
           q: "What's the brand of the dishwasher?",
-          a: [
-            "Samsung",
-            "LG",
-            "Whirlpool",
-            "General Electric",
-            "MAYTAG",
-            "Frigidaire",
-            "Other",
-          ],
+          // prettier-ignore
+          a: [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47]
         },
         {
           q: "Select the issue",
@@ -137,15 +120,8 @@ export function getQuestions(name) {
       return [
         {
           q: "What's the brand of the cooktop?",
-          a: [
-            "Samsung",
-            "LG",
-            "Whirlpool",
-            "General Electric",
-            "MAYTAG",
-            "Frigidaire",
-            "Other",
-          ],
+          // prettier-ignore
+          a: [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47]
         },
         {
           q: "Select the issue",
@@ -157,15 +133,8 @@ export function getQuestions(name) {
       return [
         {
           q: "What's the brand of the freezer?",
-          a: [
-            "Samsung",
-            "LG",
-            "Whirlpool",
-            "General Electric",
-            "MAYTAG",
-            "Frigidaire",
-            "Other",
-          ],
+          // prettier-ignore
+          a: [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47]
         },
         {
           q: "Select the issue",
@@ -177,19 +146,51 @@ export function getQuestions(name) {
       return [
         {
           q: "What's the brand of the microwave?",
-          a: [
-            "Samsung",
-            "LG",
-            "Whirlpool",
-            "General Electric",
-            "MAYTAG",
-            "Frigidaire",
-            "Other",
-          ],
+          // prettier-ignore
+          a: [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47]
         },
         {
           q: "Select the issue",
           a: ["No power", "Other"],
+        },
+      ]
+
+    case "range hood":
+      return [
+        {
+          q: "What's the brand of the range hood?",
+          // prettier-ignore
+          a: [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47]
+        },
+      ]
+
+    case "trash compactor":
+      return [
+        {
+          q: "What's the brand of the trash compactor?",
+          // prettier-ignore
+          a: [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47]
+        },
+      ]
+
+    case "washer dryer combo":
+      return [
+        {
+          q: "What's the brand of the washer dryer?",
+          // prettier-ignore
+          a: [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47]
+        },
+        {
+          q: "Select the issue",
+          a: [
+            "Leaking",
+            "Odor",
+            "Not draining",
+            "Not drying",
+            "Drum issue",
+            "No power",
+            "Other",
+          ],
         },
       ]
 
@@ -560,4 +561,77 @@ export function getQuestions(name) {
     default:
       break
   }
+}
+
+const BRANDS = [
+  {
+    name: "Samsung",
+    logo: samsung,
+  },
+  {
+    name: "LG",
+    logo: lg,
+  },
+  {
+    name: "Whirlpool",
+    logo: whirlpool,
+  },
+  {
+    name: "General Electric",
+    logo: generalElectric,
+  },
+  {
+    name: "MAYTAG",
+    logo: maytag,
+  },
+  {
+    name: "Frigidaire",
+    logo: frigidaire,
+  },
+  "Emerson",
+  "Estate",
+  "Fisher-Paykel",
+  "Galaxy",
+  "Gallery",
+  "Gibson",
+  "Gladiator",
+  "Goldstar",
+  "HEC",
+  "Hair",
+  "Holiday",
+  "Hotpoint",
+  "Ikea",
+  "Imperial",
+  "Inglis",
+  "Insinkerator",
+  "Jenn Air",
+  "Kelvinator",
+  "Kenmore",
+  "Kirkland",
+  "KitchenAid",
+  "Liberty",
+  "Magic Chef",
+  "Modern Maid",
+  "Monogram",
+  "Montgomery Wards",
+  "Norge",
+  "Panasonic",
+  "Profile",
+  "Roper",
+  "Sanyo",
+  "Sears",
+  "Sharp",
+  "Signature",
+  "Speed Queen",
+  "Tappan",
+  "Vinotemp",
+  "WCI",
+  "WC Woods",
+  "White Westinghouse",
+  "Zoneline",
+  "Other / Don't know",
+]
+
+export function getBrand(number) {
+  return BRANDS[number]
 }

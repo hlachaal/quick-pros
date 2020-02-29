@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from "react"
+import { getBrand } from "./utils"
 import bookingStyles from "../../pages/booking.module.scss"
 
 class ServiceQuestion extends Component {
@@ -63,7 +64,47 @@ class ServiceQuestion extends Component {
             )}
           </div>
         )
-      } else console.log(typeof answer)
+      } else {
+        const brand = getBrand(answer)
+        switch (typeof brand) {
+          case "string":
+            return (
+              <button
+                key={brand}
+                className={bookingStyles.listItem}
+                onClick={() =>
+                  this.props.answerToQuestion(
+                    this.props.question,
+                    brand,
+                    this.props.screens
+                  )
+                }
+              >
+                {brand}
+              </button>
+            )
+          case "object":
+            return (
+              <button
+                key={brand.name}
+                className={bookingStyles.listItem}
+                onClick={() =>
+                  this.props.answerToQuestion(
+                    this.props.question,
+                    brand.name,
+                    this.props.screens
+                  )
+                }
+              >
+                <img src={brand.logo} alt={brand.name} />
+              </button>
+            )
+
+          default:
+            break
+        }
+        return <div key={answer}>{answer}</div>
+      }
     })
     return res
   }

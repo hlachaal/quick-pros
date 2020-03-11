@@ -67,6 +67,7 @@ class ZipCode extends Component {
           <p className={bookingStyles.err}>{this.state.err}</p>
           <button
             style={style2}
+            className={bookingStyles.continue}
             onClick={() => {
               this.props.onSelectZipCode(this.state.zipCode)
             }}

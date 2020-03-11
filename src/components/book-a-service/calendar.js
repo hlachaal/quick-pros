@@ -32,7 +32,11 @@ class Calendar extends Component {
         </div>
         <div className={bookingStyles.ctrl}>
           <p className={bookingStyles.err}>{this.props.errDate}</p>
-          <button style={style} onClick={this.props.onSelectDate}>
+          <button
+            style={style}
+            className={bookingStyles.continue}
+            onClick={this.props.onSelectDate}
+          >
             Continue
           </button>
         </div>

@@ -52,7 +52,11 @@ class CuInfo extends Component {
             </p>
           </div>
 
-          <button style={style} onClick={this.props.onSelectCusInfo}>
+          <button
+            style={style}
+            className={bookingStyles.continue}
+            onClick={this.props.onSelectCusInfo}
+          >
             Continue
           </button>
         </div>

@@ -7,7 +7,7 @@ import {
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons"
 import { Link } from "gatsby"
-import logo from "../images/logo.png"
+import logo from "../images/logo.svg"
 
 import headerStyles from "./header.module.scss"
 
@@ -40,7 +40,7 @@ const Header = ({ siteTitle }) => {
               >
                 Pricing
               </Link>
-            </li> 
+            </li>  */}
             <li>
               <Link
                 className={headerStyles.navItem}
@@ -50,7 +50,7 @@ const Header = ({ siteTitle }) => {
                 Book a Service
               </Link>
             </li>
-             <li>
+            <li>
               <Link
                 className={headerStyles.navItem}
                 activeClassName={headerStyles.activeNavItem}
@@ -67,7 +67,7 @@ const Header = ({ siteTitle }) => {
               >
                 Contact
               </Link>
-            </li> */}
+            </li>
           </ul>
         </nav>
       </div>

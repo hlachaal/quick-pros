@@ -37,7 +37,11 @@ class Address extends Component {
             name="instructions"
             placeholder="Instructions (Optional)"
           ></textarea>
-          <button style={style} onClick={this.props.onSelectAddress}>
+          <button
+            style={style}
+            className={bookingStyles.continue}
+            onClick={this.props.onSelectAddress}
+          >
             Continue
           </button>
         </div>

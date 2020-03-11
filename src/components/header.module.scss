@@ -7,7 +7,7 @@ header {
   width: 130px;
   flex: 1;
   img {
-    width: 43px;
+    width: 76px;
     margin: 0;
     display: flex;
   }
@@ -17,12 +17,15 @@ header {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  nav {
+    margin: auto;
+  }
 }
 .hamburger {
   display: none;
   label {
     font-size: 35px;
-    color: #575b7a;
+    color: #1dbab4;
   }
 }
 .social {
@@ -48,7 +51,7 @@ header {
       }
       a:hover {
         color: #fff;
-        background: #235197;
+        background: #1dbab4;
       }
     }
   }
@@ -64,7 +67,7 @@ header {
   justify-content: flex-start;
 }
 .nav-item {
-  color: #4a4b4d;
+  color: #ffffff;
   padding: 15px 40px 20px 0;
   line-height: 24px;
 
@@ -73,14 +76,13 @@ header {
   flex: 1;
 }
 .nav-item:hover {
-  color: #235197;
+  color: #1dbab4;
 
   font-weight: 600;
 }
 .active-nav-item {
-  color: #235197;
-
   font-weight: 600;
+  color: #1dbab4;
 }
 @media only screen and (max-width: 826px) {
   nav {
@@ -97,11 +99,9 @@ header {
   }
 
   .hamburger {
-    flex: 1;
-    align-items: center;
+    flex: 1 1;
+    display: flex;
     justify-content: flex-end;
-    text-align: right;
-    display: block;
     label {
       display: block;
       cursor: pointer;

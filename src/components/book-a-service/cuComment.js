@@ -16,6 +16,7 @@ class cuComment extends Component {
             placeholder="Optional"
           ></textarea>
           <button
+            className={bookingStyles.continue}
             onClick={() => {
               this.props.onSelectComment()
             }}

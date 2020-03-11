@@ -18,7 +18,7 @@ class Appointment extends Component {
     this.state = {
       serviceTypeSelected: false,
       zipCode: 0,
-      zipCodeSelected: true,
+      zipCodeSelected: false,
       serviceSelected: false,
       detailsSelected: false,
       commentSelected: false,
@@ -27,7 +27,7 @@ class Appointment extends Component {
       cuInfoSelected: false,
       detailsReviewed: false,
       allServiceInfo: {
-        serviceType: "handyman services",
+        serviceType: "",
         service: {
           name: "",
           questions: [],

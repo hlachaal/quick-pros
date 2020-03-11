@@ -7,6 +7,7 @@ import handyman from "../../images/services/handyman-services.svg"
 import iPhone from "../../images/services/iphone-repair.svg"
 import moving from "../../images/services/moving.svg"
 import cleaning from "../../images/services/cleaning-services.svg"
+import plumbing from "../../images/services/plumbing.svg"
 
 import bookingStyles from "../../pages/booking.module.scss"
 
@@ -55,23 +56,6 @@ class ServiceType extends Component {
           </button>
 
           <button
-            onClick={() => this.props.onSelectServiceType("tv mounting")}
-            className={bookingStyles.serviceContainer}
-          >
-            <div className={bookingStyles.imageContainer}>
-              <img
-                alt="TV mounting"
-                className={bookingStyles.serviceImage}
-                src={tv}
-              />
-            </div>
-            <div className={bookingStyles.serviceTitle}>
-              <p>TV</p>
-              <p>Mounting</p>
-            </div>
-          </button>
-
-          <button
             onClick={() => this.props.onSelectServiceType("iphone repair")}
             className={bookingStyles.serviceContainer}
           >
@@ -85,6 +69,39 @@ class ServiceType extends Component {
             <div className={bookingStyles.serviceTitle}>
               <p>iPhone</p>
               <p>Repair</p>
+            </div>
+          </button>
+
+          <button
+            onClick={() => this.props.onSelectServiceType("furniture assembly")}
+            className={bookingStyles.serviceContainer}
+          >
+            <div className={bookingStyles.imageContainer}>
+              <img
+                alt="Furniture assembly and delivery"
+                className={bookingStyles.serviceImage}
+                src={furniture}
+              />
+            </div>
+            <div className={bookingStyles.serviceTitle}>
+              <p>Furniture</p>
+              <p>Assembly</p>
+            </div>
+          </button>
+
+          <button
+            onClick={() => this.props.onSelectServiceType("Plumbing")}
+            className={bookingStyles.serviceContainer}
+          >
+            <div className={bookingStyles.imageContainer}>
+              <img
+                alt="Plumber services"
+                className={bookingStyles.serviceImage}
+                src={plumbing}
+              />
+            </div>
+            <div className={bookingStyles.serviceTitle}>
+              <p>Plumbing</p>
             </div>
           </button>
 
@@ -106,6 +123,23 @@ class ServiceType extends Component {
           </button>
 
           <button
+            onClick={() => this.props.onSelectServiceType("tv mounting")}
+            className={bookingStyles.serviceContainer}
+          >
+            <div className={bookingStyles.imageContainer}>
+              <img
+                alt="TV mounting"
+                className={bookingStyles.serviceImage}
+                src={tv}
+              />
+            </div>
+            <div className={bookingStyles.serviceTitle}>
+              <p>TV</p>
+              <p>Mounting</p>
+            </div>
+          </button>
+
+          <button
             onClick={() => this.props.onSelectServiceType("heavy lifting")}
             className={bookingStyles.serviceContainer}
           >
@@ -117,25 +151,8 @@ class ServiceType extends Component {
               />
             </div>
             <div className={bookingStyles.serviceTitle}>
-              <p>Heavy</p>
-              <p>Lifting</p>
-            </div>
-          </button>
-
-          <button
-            onClick={() => this.props.onSelectServiceType("furniture assembly")}
-            className={bookingStyles.serviceContainer}
-          >
-            <div className={bookingStyles.imageContainer}>
-              <img
-                alt="Furniture assembly and delivery"
-                className={bookingStyles.serviceImage}
-                src={furniture}
-              />
-            </div>
-            <div className={bookingStyles.serviceTitle}>
-              <p>Furniture</p>
-              <p>Assembly</p>
+              <p>Small</p>
+              <p>Moves</p>
             </div>
           </button>
         </section>

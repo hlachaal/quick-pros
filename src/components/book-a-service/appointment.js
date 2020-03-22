@@ -85,11 +85,7 @@ class Appointment extends Component {
     }
   }
   renderService() {
-    if (
-      this.state.serviceTypeSelected &&
-      this.state.zipCodeSelected &&
-      !this.state.serviceSelected
-    ) {
+    if (this.state.serviceTypeSelected && !this.state.serviceSelected) {
       return (
         <Service
           onSelectService={this.selectService}
@@ -100,7 +96,11 @@ class Appointment extends Component {
   }
 
   renderZipCodeForm() {
-    if (this.state.serviceTypeSelected && !this.state.zipCodeSelected) {
+    if (
+      this.state.serviceTypeSelected &&
+      this.state.serviceSelected &&
+      !this.state.zipCodeSelected
+    ) {
       return <ZipCode onSelectZipCode={this.selectZipCode} />
     }
   }
@@ -400,8 +400,8 @@ class Appointment extends Component {
     return (
       <Fragment>
         {this.renderServiceType()}
-        {this.renderZipCodeForm()}
         {this.renderService()}
+        {this.renderZipCodeForm()}
         {this.renderServiceDetails()}
         {this.renderComment()}
         {this.renderCalendar()}

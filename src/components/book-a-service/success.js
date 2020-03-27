@@ -14,14 +14,11 @@ class Success extends Component {
           <p>Your request has been successfully sent!</p>
         </div>
         <div className={bookingStyles.detailsWrapper}>
-          <div className={bookingStyles.detail}>
-            <p>
-              We will review the provided information, communicate them with our
-              trusted maintenance professional in your area and send you
-              updates. If you have any questions please call{" "}
-              <span>(619) 359-7532</span>. Thank you for choosing our service.
-            </p>
-          </div>
+          <p>
+            Our trusted maintenance pro will review your request and contact you
+            soon. If you have any questions please call{" "}
+            <span>(619) 359-7532</span>.
+          </p>
         </div>
       </Fragment>
     )

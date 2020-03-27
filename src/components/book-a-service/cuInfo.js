@@ -1,4 +1,6 @@
 import React, { Component, Fragment } from "react"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons"
 import bookingStyles from "../../pages/booking.module.scss"
 
 class CuInfo extends Component {
@@ -9,6 +11,13 @@ class CuInfo extends Component {
 
     return (
       <Fragment>
+        <button
+          onKeyDown={() => this.props.onClickLeft(6)}
+          className={bookingStyles.arrowLeft}
+          onClick={() => this.props.onClickLeft(6)}
+        >
+          <FontAwesomeIcon icon={faArrowLeft} />
+        </button>
         <div className={bookingStyles.question}>
           <p>Where can we send the appointment updates?</p>
         </div>
@@ -57,7 +66,7 @@ class CuInfo extends Component {
             className={bookingStyles.continue}
             onClick={this.props.onSelectCusInfo}
           >
-            Continue
+            Request Service
           </button>
         </div>
       </Fragment>

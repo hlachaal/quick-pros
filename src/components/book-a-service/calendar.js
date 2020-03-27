@@ -1,4 +1,6 @@
 import React, { Component, Fragment } from "react"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons"
 import bookingStyles from "../../pages/booking.module.scss"
 import DatePicker from "react-datepicker"
 import setMinutes from "date-fns/setMinutes"
@@ -14,6 +16,12 @@ class Calendar extends Component {
     }
     return (
       <Fragment>
+        <button
+          className={bookingStyles.arrowLeft}
+          onClick={() => this.props.onClickLeft(4)}
+        >
+          <FontAwesomeIcon icon={faArrowLeft} />
+        </button>
         <div className={bookingStyles.question}>
           <p>What's your preferred timing?</p>
         </div>

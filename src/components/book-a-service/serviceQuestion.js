@@ -1,4 +1,6 @@
 import React, { Component, Fragment } from "react"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons"
 import { getBrand } from "./utils"
 import bookingStyles from "../../pages/booking.module.scss"
 
@@ -109,8 +111,17 @@ class ServiceQuestion extends Component {
     return res
   }
   render() {
+    console.log(this.props.prevQuestions)
+    /* eslint-disable no-debugger, no-console */
     return (
       <Fragment>
+        <button
+          onKeyDown={() => this.props.onClickLeft(2)}
+          className={bookingStyles.arrowLeft}
+          onClick={() => this.props.onClickLeft(2)}
+        >
+          <FontAwesomeIcon icon={faArrowLeft} />
+        </button>
         <div className={bookingStyles.question}>
           <p>{this.props.question}</p>
         </div>

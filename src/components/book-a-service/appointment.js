@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from "react"
+/* import { browserHistory } from "react-router" */
 
 import ServiceType from "./serviceType"
 import Service from "./service"
@@ -9,7 +10,7 @@ import ServiceQuestion from "./serviceQuestion"
 import CuComment from "./cuComment"
 import Calendar from "./calendar"
 import CuInfo from "./cuInfo"
-import ReviewDetails from "./reviewDetails"
+import Success from "./success"
 import Address from "./address"
 
 class Appointment extends Component {
@@ -18,7 +19,7 @@ class Appointment extends Component {
     this.state = {
       serviceTypeSelected: false,
       zipCode: 0,
-      zipCodeSelected: false,
+      zipCodeSelected: true,
       serviceSelected: false,
       detailsSelected: false,
       commentSelected: false,
@@ -49,8 +50,22 @@ class Appointment extends Component {
         buttonDisabled: true,
       },
     }
+  } /* 
+  componentDidMount() {
+    this.onScrollNearBottom(this.scrollToLoad)
+
+    this.backListener = browserHistory.listen(location => {
+      if (location.action === "POP") {
+        // Do your stuff
+      }
+    })
   }
 
+  componentWillUnmount() {
+    // Unbind listener
+    this.backListener()
+  }
+ */
   selectServiceType = param => {
     const serviceType = param
     const serviceTypeSelected = true
@@ -90,6 +105,7 @@ class Appointment extends Component {
         <Service
           onSelectService={this.selectService}
           serviceType={this.state.allServiceInfo.serviceType}
+          onClickLeft={this.handleClickLeft}
         />
       )
     }
@@ -102,6 +118,68 @@ class Appointment extends Component {
       !this.state.zipCodeSelected
     ) {
       return <ZipCode onSelectZipCode={this.selectZipCode} />
+    }
+  }
+  handleClickLeft = e => {
+    switch (e) {
+      case 1:
+        this.setState({
+          ...this.state,
+          serviceTypeSelected: false,
+        })
+        break
+
+      case 2:
+        if (this.state.allServiceInfo.service.questions.length > 0) {
+          const asi = this.state.allServiceInfo
+          asi.service.questions.pop()
+          asi.service.answers.pop()
+          this.setState({
+            ...this.state,
+            allServiceInfo: asi,
+          })
+        } else {
+          this.setState({
+            ...this.state,
+            serviceSelected: false,
+          })
+        }
+        break
+
+      case 3:
+        const asi = this.state.allServiceInfo
+        asi.service.questions.pop()
+        asi.service.answers.pop()
+        this.setState({
+          ...this.state,
+          allServiceInfo: asi,
+          detailsSelected: false,
+        })
+        break
+
+      case 4:
+        this.setState({
+          ...this.state,
+          commentSelected: false,
+        })
+        break
+
+      case 5:
+        this.setState({
+          ...this.state,
+          calendarSelected: false,
+        })
+        break
+
+      case 6:
+        this.setState({
+          ...this.state,
+          addressSelected: false,
+        })
+        break
+
+      default:
+        break
     }
   }
 
@@ -127,6 +205,7 @@ class Appointment extends Component {
             answerToQuestion={this.answerToQuestion}
             onUpdateItem={this.updateItem}
             onCloseMulti={this.closeMulti}
+            onClickLeft={this.handleClickLeft}
           />
         )
       }
@@ -210,6 +289,7 @@ class Appointment extends Component {
         <CuComment
           onUpdateComment={this.updateComment}
           onSelectComment={this.selectComment}
+          onClickLeft={this.handleClickLeft}
         />
       )
     }
@@ -241,6 +321,7 @@ class Appointment extends Component {
           onSelectDate={this.selectDate}
           startDate={this.state.startDate}
           errDate={this.state.errDate}
+          onClickLeft={this.handleClickLeft}
         />
       )
     }
@@ -308,6 +389,7 @@ class Appointment extends Component {
           onUpdateAddress={this.updateAddress}
           onUpdateInput={this.updateInput}
           onSelectAddress={this.selectAddress}
+          onClickLeft={this.handleClickLeft}
         />
       )
     }
@@ -377,11 +459,12 @@ class Appointment extends Component {
           onCusInfoChange={this.cusInfoChange}
           onUpdateInput={this.updateInput}
           onSelectCusInfo={this.selectCusInfo}
+          onClickLeft={this.handleClickLeft}
         />
       )
     }
   }
-  renderReviewDetails() {
+  renderSuccess() {
     if (
       this.state.serviceTypeSelected &&
       this.state.zipCodeSelected &&
@@ -392,7 +475,7 @@ class Appointment extends Component {
       this.state.cuInfoSelected &&
       !this.state.detailsReviewed
     ) {
-      return <ReviewDetails data={this.state} />
+      return <Success data={this.state} />
     }
   }
 
@@ -407,7 +490,7 @@ class Appointment extends Component {
         {this.renderCalendar()}
         {this.renderAddress()}
         {this.renderCuInfo()}
-        {this.renderReviewDetails()}
+        {this.renderSuccess()}
       </Fragment>
     )
   }

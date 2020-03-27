@@ -1,4 +1,6 @@
 import React, { Component, Fragment } from "react"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons"
 import bookingStyles from "../../pages/booking.module.scss"
 import GooglePlacesAutocomplete from "react-google-places-autocomplete"
 //import bookingStyles from "../../pages/booking.module.scss"
@@ -11,6 +13,12 @@ class Address extends Component {
     }
     return (
       <Fragment>
+        <button
+          className={bookingStyles.arrowLeft}
+          onClick={() => this.props.onClickLeft(5)}
+        >
+          <FontAwesomeIcon icon={faArrowLeft} />
+        </button>
         <div className={bookingStyles.question}>
           <p>What's your address?</p>
         </div>

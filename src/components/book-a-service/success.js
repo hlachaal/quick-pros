@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from "react"
 import bookingStyles from "../../pages/booking.module.scss"
 
-class ReviewDetails extends Component {
+class Success extends Component {
   constructor(props) {
     super(props)
     this.state = { ...this.props.data }
@@ -11,11 +11,16 @@ class ReviewDetails extends Component {
     return (
       <Fragment>
         <div className={bookingStyles.question}>
-          <p>Please review the details and submit the request.</p>
+          <p>Your request has been successfully sent!</p>
         </div>
         <div className={bookingStyles.detailsWrapper}>
           <div className={bookingStyles.detail}>
-            <p></p>
+            <p>
+              We will review the provided information, communicate them with our
+              trusted maintenance professional in your area and send you
+              updates. If you have any questions please call{" "}
+              <span>(619) 359-7532</span>. Thank you for choosing our service.
+            </p>
           </div>
         </div>
       </Fragment>
@@ -23,4 +28,4 @@ class ReviewDetails extends Component {
   }
 }
 
-export default ReviewDetails
+export default Success

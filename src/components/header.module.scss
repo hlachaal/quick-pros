@@ -6,11 +6,6 @@ header {
 .logo {
   width: 130px;
   flex: 1;
-  img {
-    width: 76px;
-    margin: 0;
-    display: flex;
-  }
 }
 .nav {
   flex: 4;
@@ -83,6 +78,20 @@ header {
 .active-nav-item {
   font-weight: 600;
   color: #1dbab4;
+}
+.logo-wrapper {
+  display: flex;
+  text-decoration: none;
+  img {
+    width: 50px;
+    display: inline-block;
+    margin-right: 5px;
+  }
+  span {
+    display: inline-block;
+    font-size: 24px;
+    color: #fff;
+  }
 }
 @media only screen and (max-width: 826px) {
   nav {

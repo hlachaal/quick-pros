@@ -558,6 +558,36 @@ export function getQuestions(name) {
         },
       ]
 
+    case "IKEA furniture items only":
+      return [
+        {
+          q: "How many pieces of furniture will be assembled?",
+          a: [
+            {
+              option: "Small furniture",
+              description: "Chairs stools, small end tables, etc.",
+            },
+            {
+              option: "Medium furniture",
+              description: "Tables, one to two drawer chests, desks, etc.",
+            },
+            {
+              option: "Large furniture",
+              description: "Beds, Dressers, shelving units, etc.",
+            },
+          ],
+        },
+        {
+          q: "How many hours of service do you estimate you will need?",
+          a: [
+            {
+              option: "Handyman hours",
+              description: "Please estimate the number of hours you will need",
+            },
+          ],
+        },
+      ]
+
     default:
       break
   }

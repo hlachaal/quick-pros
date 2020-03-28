@@ -15,8 +15,13 @@ const Header = ({ siteTitle }) => {
   return (
     <header>
       <div className={headerStyles.logo}>
-        <Link to="/">
+        <Link to="/" className={headerStyles.logoWrapper}>
           <img alt="Home services" src={logo} />
+          <span>
+            Quick
+            <br />
+            PROS
+          </span>
         </Link>
       </div>
       <div className={headerStyles.nav}>

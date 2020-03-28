@@ -50,7 +50,11 @@ class Appointment extends Component {
         buttonDisabled: true,
       },
     }
-  } /* 
+  }
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
+  /* 
   componentDidMount() {
     this.onScrollNearBottom(this.scrollToLoad)
 
@@ -96,11 +100,13 @@ class Appointment extends Component {
 
   renderServiceType() {
     if (!this.state.serviceTypeSelected) {
+      window.scrollTo(0, 0)
       return <ServiceType onSelectServiceType={this.selectServiceType} />
     }
   }
   renderService() {
     if (this.state.serviceTypeSelected && !this.state.serviceSelected) {
+      window.scrollTo(0, 0)
       return (
         <Service
           onSelectService={this.selectService}
@@ -117,6 +123,7 @@ class Appointment extends Component {
       this.state.serviceSelected &&
       !this.state.zipCodeSelected
     ) {
+      window.scrollTo(0, 0)
       return <ZipCode onSelectZipCode={this.selectZipCode} />
     }
   }
@@ -195,6 +202,7 @@ class Appointment extends Component {
         questions.length - this.state.allServiceInfo.service.questions.length
       if (screens > 0) {
         const current = questions.length - screens
+        window.scrollTo(0, 0)
         return (
           <ServiceQuestion
             question={questions[current].q}
@@ -285,6 +293,7 @@ class Appointment extends Component {
       this.state.detailsSelected &&
       !this.state.commentSelected
     ) {
+      window.scrollTo(0, 0)
       return (
         <CuComment
           onUpdateComment={this.updateComment}
@@ -315,6 +324,7 @@ class Appointment extends Component {
       this.state.commentSelected &&
       !this.state.calendarSelected
     ) {
+      window.scrollTo(0, 0)
       return (
         <Calendar
           onHandleChange={this.handleDateChange}
@@ -383,6 +393,7 @@ class Appointment extends Component {
       this.state.calendarSelected &&
       !this.state.addressSelected
     ) {
+      window.scrollTo(0, 0)
       return (
         <Address
           customerInfo={this.state.customerInfo}
@@ -453,6 +464,7 @@ class Appointment extends Component {
       this.state.addressSelected &&
       !this.state.cuInfoSelected
     ) {
+      window.scrollTo(0, 0)
       return (
         <CuInfo
           customerInfo={this.state.customerInfo}
@@ -475,6 +487,7 @@ class Appointment extends Component {
       this.state.cuInfoSelected &&
       !this.state.detailsReviewed
     ) {
+      window.scrollTo(0, 0)
       return <Success data={this.state} />
     }
   }

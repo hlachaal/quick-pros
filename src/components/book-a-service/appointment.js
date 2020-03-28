@@ -51,9 +51,6 @@ class Appointment extends Component {
       },
     }
   }
-  componentDidMount() {
-    window.scrollTo(0, 0)
-  }
   /* 
   componentDidMount() {
     this.onScrollNearBottom(this.scrollToLoad)

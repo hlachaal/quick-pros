@@ -12,6 +12,9 @@ class ZipCode extends Component {
       buttonDisabled: true,
     }
   }
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
   validate = e => {
     this.setState({ zipCode: e.target.value })
     if (e.target.value.length >= 5) {

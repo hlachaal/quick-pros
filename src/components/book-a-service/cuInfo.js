@@ -4,6 +4,9 @@ import { faArrowLeft } from "@fortawesome/free-solid-svg-icons"
 import bookingStyles from "../../pages/booking.module.scss"
 
 class CuInfo extends Component {
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
   render() {
     const style = {
       display: this.props.customerInfo.buttonDisabled ? "none" : "block",

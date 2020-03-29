@@ -6,6 +6,9 @@ class Success extends Component {
     super(props)
     this.state = { ...this.props.data }
   }
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
   render() {
     console.log(this.state)
     return (

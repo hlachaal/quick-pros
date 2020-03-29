@@ -6,6 +6,9 @@ import GooglePlacesAutocomplete from "react-google-places-autocomplete"
 //import bookingStyles from "../../pages/booking.module.scss"
 
 class Address extends Component {
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
   render() {
     //console.log(this.props.customerInfo)
     const style = {

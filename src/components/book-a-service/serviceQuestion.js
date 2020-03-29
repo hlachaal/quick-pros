@@ -5,6 +5,9 @@ import { getBrand } from "./utils"
 import bookingStyles from "../../pages/booking.module.scss"
 
 class ServiceQuestion extends Component {
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
   renderQuantity(answer, pAnswers) {
     if (pAnswers[0]) {
       let qty = pAnswers[0].filter(pAnswer => {
@@ -111,7 +114,7 @@ class ServiceQuestion extends Component {
     return res
   }
   render() {
-    console.log(this.props.prevQuestions)
+    //console.log(this.props.prevQuestions)
     /* eslint-disable no-debugger, no-console */
     return (
       <Fragment>

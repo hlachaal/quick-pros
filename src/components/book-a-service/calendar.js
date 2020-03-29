@@ -10,6 +10,9 @@ import moment from "moment"
 import "react-datepicker/dist/react-datepicker.css"
 
 class Calendar extends Component {
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
   render() {
     const style = {
       display: this.props.errDate !== "" ? "none" : "block",

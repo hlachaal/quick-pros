@@ -16,14 +16,14 @@ class Address extends Component {
     }
     return (
       <Fragment>
-        <button
-          className={bookingStyles.arrowLeft}
-          onClick={() => this.props.onClickLeft(5)}
-        >
-          <FontAwesomeIcon icon={faArrowLeft} />
-        </button>
         <div className={bookingStyles.question}>
           <p>What's your address?</p>
+          <button
+            className={bookingStyles.arrowLeft}
+            onClick={() => this.props.onClickLeft(5)}
+          >
+            <FontAwesomeIcon icon={faArrowLeft} />
+          </button>
         </div>
         <div className={bookingStyles.commentForm}>
           <div>

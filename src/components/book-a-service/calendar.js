@@ -19,14 +19,14 @@ class Calendar extends Component {
     }
     return (
       <Fragment>
-        <button
-          className={bookingStyles.arrowLeft}
-          onClick={() => this.props.onClickLeft(4)}
-        >
-          <FontAwesomeIcon icon={faArrowLeft} />
-        </button>
         <div className={bookingStyles.question}>
           <p>What's your preferred timing?</p>
+          <button
+            className={bookingStyles.arrowLeft}
+            onClick={() => this.props.onClickLeft(4)}
+          >
+            <FontAwesomeIcon icon={faArrowLeft} />
+          </button>
         </div>
         <div>
           <DatePicker

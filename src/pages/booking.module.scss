@@ -61,6 +61,7 @@
   cursor: pointer;
   background: transparent;
   border: none;
+  display: flex;
 }
 .arrow-left:hover {
   color: #1dbab4;
@@ -71,7 +72,7 @@
 }
 .question {
   text-align: center;
-  margin: 20px 0 60px 0;
+  margin: 20px 0 40px 0;
   p {
     font-size: 1.5em;
   }

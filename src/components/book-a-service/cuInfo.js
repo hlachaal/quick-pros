@@ -14,15 +14,15 @@ class CuInfo extends Component {
 
     return (
       <Fragment>
-        <button
-          onKeyDown={() => this.props.onClickLeft(6)}
-          className={bookingStyles.arrowLeft}
-          onClick={() => this.props.onClickLeft(6)}
-        >
-          <FontAwesomeIcon icon={faArrowLeft} />
-        </button>
         <div className={bookingStyles.question}>
           <p>Where can we send the appointment updates?</p>
+          <button
+            onKeyDown={() => this.props.onClickLeft(6)}
+            className={bookingStyles.arrowLeft}
+            onClick={() => this.props.onClickLeft(6)}
+          >
+            <FontAwesomeIcon icon={faArrowLeft} />
+          </button>
         </div>
         <div className={bookingStyles.commentForm}>
           <input

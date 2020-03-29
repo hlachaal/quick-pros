@@ -8,6 +8,9 @@ class ServiceQuestion extends Component {
   componentDidMount() {
     window.scrollTo(0, 0)
   }
+  componentDidUpdate() {
+    window.scrollTo(0, 0)
+  }
   renderQuantity(answer, pAnswers) {
     if (pAnswers[0]) {
       let qty = pAnswers[0].filter(pAnswer => {
@@ -118,15 +121,15 @@ class ServiceQuestion extends Component {
     /* eslint-disable no-debugger, no-console */
     return (
       <Fragment>
-        <button
-          onKeyDown={() => this.props.onClickLeft(2)}
-          className={bookingStyles.arrowLeft}
-          onClick={() => this.props.onClickLeft(2)}
-        >
-          <FontAwesomeIcon icon={faArrowLeft} />
-        </button>
         <div className={bookingStyles.question}>
           <p>{this.props.question}</p>
+          <button
+            onKeyDown={() => this.props.onClickLeft(2)}
+            className={bookingStyles.arrowLeft}
+            onClick={() => this.props.onClickLeft(2)}
+          >
+            <FontAwesomeIcon icon={faArrowLeft} />
+          </button>
         </div>
         <div className={bookingStyles.serviceList}>
           {this.renderAnswers(this.props.answers, this.props.prevAnswers)}

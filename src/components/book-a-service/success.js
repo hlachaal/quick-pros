@@ -14,7 +14,7 @@ class Success extends Component {
     return (
       <Fragment>
         <div className={bookingStyles.question}>
-          <p>Your request has been successfully sent!</p>
+          <p>Your request was successfully sent!</p>
         </div>
         <div className={bookingStyles.detailsWrapper}>
           <p>

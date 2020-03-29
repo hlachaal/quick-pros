@@ -353,15 +353,17 @@ class Service extends Component {
   render() {
     return (
       <Fragment>
-        <button
-          className={bookingStyles.arrowLeft}
-          onClick={() => this.props.onClickLeft(1)}
-        >
-          <FontAwesomeIcon icon={faArrowLeft} />
-        </button>
         <div className={bookingStyles.question}>
           <p>{this.renderQuestion()}</p>
+
+          <button
+            className={bookingStyles.arrowLeft}
+            onClick={() => this.props.onClickLeft(1)}
+          >
+            <FontAwesomeIcon icon={faArrowLeft} />
+          </button>
         </div>
+
         {this.renderServices()}
       </Fragment>
     )

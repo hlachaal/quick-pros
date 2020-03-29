@@ -10,14 +10,14 @@ class cuComment extends Component {
   render() {
     return (
       <Fragment>
-        <button
-          className={bookingStyles.arrowLeft}
-          onClick={() => this.props.onClickLeft(3)}
-        >
-          <FontAwesomeIcon icon={faArrowLeft} />
-        </button>
         <div className={bookingStyles.question}>
           <p>Describe the job in detail</p>
+          <button
+            className={bookingStyles.arrowLeft}
+            onClick={() => this.props.onClickLeft(3)}
+          >
+            <FontAwesomeIcon icon={faArrowLeft} />
+          </button>
         </div>
         <div className={bookingStyles.commentForm}>
           <textarea

@@ -114,26 +114,56 @@ header {
     flex: 1 1;
     display: flex;
     justify-content: flex-end;
-    label {
-      display: block;
+    button {
+      color: #1dbab4;
+      background: transparent;
+      border: none;
       cursor: pointer;
+      font-size: 35px;
+      padding: 0px 10px;
     }
+    button:hover {
+      color: #fff;
+      border: solid 2px #1dbab4;
+      padding: 0px 8px;
+    }
+  }
+  .nav-list {
+    display: none;
   }
   .social {
     display: none;
   }
-  .nav-list {
-    border-top: 1px solid #eaeaeb;
-    display: none;
-    li {
-      line-height: 3;
-      border-bottom: 1px solid #eaeaeb;
+  .modal {
+    font-size: 12px;
+  }
+  .modal {
+    border-radius: 5px;
+    .content {
+      width: 100%;
+      padding: 20px 5px;
+      font-size: 2em;
+      line-height: 2.2em;
+      text-align: center;
+      .nav-item {
+        color: #235197;
+      }
+      .active-nav-item {
+        color: #1dbab4;
+      }
+      ul {
+        list-style: none;
+        margin: 0;
+        li {
+          a {
+            text-decoration: none;
+            padding: 0;
+
+            font-size: 1em;
+            line-height: 2.8em;
+          }
+        }
+      }
     }
   }
-}
-input:checked ~ .nav-list {
-  display: block;
-}
-input[type="checkbox"] {
-  display: none;
 }

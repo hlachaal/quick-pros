@@ -7,11 +7,12 @@ import {
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons"
 import { Link } from "gatsby"
+import Popup from "reactjs-popup"
 import logo from "../images/logo.svg"
 
 import headerStyles from "./header.module.scss"
 
-const Header = ({ siteTitle }) => {
+const Header = () => {
   return (
     <header>
       <div className={headerStyles.logo}>
@@ -26,26 +27,7 @@ const Header = ({ siteTitle }) => {
       </div>
       <div className={headerStyles.nav}>
         <nav>
-          <input type="checkbox" id="toggle" />
           <ul className={headerStyles.navList}>
-            {/* <li>
-              <Link
-                className={headerStyles.navItem}
-                activeClassName={headerStyles.activeNavItem}
-                to="/services"
-              >
-                Services
-              </Link>
-            </li>
-            <li>
-              <Link
-                className={headerStyles.navItem}
-                activeClassName={headerStyles.activeNavItem}
-                to="/pricing"
-              >
-                Pricing
-              </Link>
-            </li>  */}
             <li>
               <Link
                 className={headerStyles.navItem}
@@ -76,9 +58,6 @@ const Header = ({ siteTitle }) => {
           </ul>
         </nav>
       </div>
-      <div className={headerStyles.hamburger}>
-        <label htmlFor="toggle">&#9776;</label>
-      </div>
       <div className={headerStyles.social}>
         <ul>
           <li>
@@ -98,25 +77,45 @@ const Header = ({ siteTitle }) => {
           </li>
         </ul>
       </div>
-      {/* <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div> */}
+      <div className={headerStyles.hamburger}>
+        <Popup trigger={<button className="button">&#9776;</button>} modal>
+          {close => (
+            <div className={headerStyles.modal}>
+              <div className={headerStyles.content}>
+                <ul>
+                  <li>
+                    <Link
+                      className={headerStyles.navItem}
+                      activeClassName={headerStyles.activeNavItem}
+                      to="/book-a-service"
+                    >
+                      Book a Service
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className={headerStyles.navItem}
+                      activeClassName={headerStyles.activeNavItem}
+                      to="/faq"
+                    >
+                      FAQ
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className={headerStyles.navItem}
+                      activeClassName={headerStyles.activeNavItem}
+                      to="/contact"
+                    >
+                      Contact
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          )}
+        </Popup>
+      </div>
     </header>
   )
 }

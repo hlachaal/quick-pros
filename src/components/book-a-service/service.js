@@ -5,6 +5,9 @@ import { faArrowLeft } from "@fortawesome/free-solid-svg-icons"
 import bookingStyles from "../../pages/booking.module.scss"
 
 class Service extends Component {
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
   renderQuestion() {
     switch (this.props.serviceType) {
       case "appliance repair":

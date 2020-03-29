@@ -50,7 +50,9 @@ class Appointment extends Component {
         buttonDisabled: true,
       },
     }
-  } /* 
+  }
+
+  /* 
   componentDidMount() {
     this.onScrollNearBottom(this.scrollToLoad)
 
@@ -98,7 +100,6 @@ class Appointment extends Component {
     if (!this.state.serviceTypeSelected) {
       return <ServiceType onSelectServiceType={this.selectServiceType} />
     }
-    window.scrollTo(0, 0)
   }
   renderService() {
     if (this.state.serviceTypeSelected && !this.state.serviceSelected) {
@@ -120,7 +121,6 @@ class Appointment extends Component {
     ) {
       return <ZipCode onSelectZipCode={this.selectZipCode} />
     }
-    window.scrollTo(0, 0)
   }
   handleClickLeft = e => {
     switch (e) {
@@ -212,7 +212,6 @@ class Appointment extends Component {
         )
       }
     }
-    window.scrollTo(0, 0)
   }
   closeMulti = q => {
     let questions = this.state.allServiceInfo.service.questions
@@ -296,7 +295,6 @@ class Appointment extends Component {
         />
       )
     }
-    window.scrollTo(0, 0)
   }
   selectComment = () => {
     this.setState({ commentSelected: true })
@@ -329,7 +327,6 @@ class Appointment extends Component {
         />
       )
     }
-    window.scrollTo(0, 0)
   }
   selectDate = () => {
     this.setState({ calendarSelected: true })
@@ -398,7 +395,6 @@ class Appointment extends Component {
         />
       )
     }
-    window.scrollTo(0, 0)
   }
 
   cusInfoChange = e => {
@@ -469,7 +465,6 @@ class Appointment extends Component {
         />
       )
     }
-    window.scrollTo(0, 0)
   }
   renderSuccess() {
     if (
@@ -484,7 +479,6 @@ class Appointment extends Component {
     ) {
       return <Success data={this.state} />
     }
-    window.scrollTo(0, 0)
   }
 
   render() {

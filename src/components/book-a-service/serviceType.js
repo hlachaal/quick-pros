@@ -12,6 +12,9 @@ import plumbing from "../../images/services/plumbing.svg"
 import bookingStyles from "../../pages/booking.module.scss"
 
 class ServiceType extends Component {
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
   render() {
     return (
       <Fragment>

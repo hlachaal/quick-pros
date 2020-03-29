@@ -115,17 +115,15 @@ header {
     display: flex;
     justify-content: flex-end;
     button {
-      color: #1dbab4;
+      color: #fff;
       background: transparent;
       border: none;
       cursor: pointer;
-      font-size: 35px;
-      padding: 0px 10px;
+      font-size: 50px;
+      padding: 0;
     }
     button:hover {
-      color: #fff;
-      border: solid 2px #1dbab4;
-      padding: 0px 8px;
+      color: #1dbab4;
     }
   }
   .nav-list {

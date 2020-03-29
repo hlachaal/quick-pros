@@ -135,15 +135,10 @@ header {
     display: none;
   }
   .modal {
-    font-size: 12px;
-  }
-  .modal {
     border-radius: 5px;
     .content {
       width: 100%;
       padding: 20px 5px;
-      font-size: 2em;
-      line-height: 2.2em;
       text-align: center;
       .nav-item {
         color: #235197;
@@ -161,6 +156,9 @@ header {
 
             font-size: 1em;
             line-height: 2.8em;
+          }
+          a:hover {
+            color: #1dbab4;
           }
         }
       }

@@ -367,35 +367,6 @@ export function getQuestions(name) {
         },
       ]
 
-    case "furniture assembly":
-      return [
-        {
-          q: "How many pieces of furniture will be assembled?",
-          a: [
-            {
-              option: "Small furniture",
-              description: "Chairs stools, small end tables, etc.",
-            },
-            {
-              option: "Medium furniture",
-              description: "Tables, one to two drawer chests, desks, etc.",
-            },
-            {
-              option: "Large furniture",
-              description: "Beds, Dressers, shelving units, etc.",
-            },
-          ],
-        },
-        {
-          q: "What type of furniture do you need assembled?",
-          a: [
-            "IKEA furniture items only",
-            "Other furniture items (non-IKEA)",
-            "Both IKEA and non-IKEA furniture",
-          ],
-        },
-      ]
-
     case "gutter cleaning":
       return [
         {
@@ -578,13 +549,8 @@ export function getQuestions(name) {
           ],
         },
         {
-          q: "How many hours of service do you estimate you will need?",
-          a: [
-            {
-              option: "Handyman hours",
-              description: "Please estimate the number of hours you will need",
-            },
-          ],
+          q: "Will the services be completed inside or outside your home?",
+          a: ["Inside only", "Outside only", "Inside and outside"],
         },
       ]
 

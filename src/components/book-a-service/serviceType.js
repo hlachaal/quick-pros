@@ -19,7 +19,7 @@ class ServiceType extends Component {
     return (
       <Fragment>
         <div className={bookingStyles.pageHead}>
-          <h1>Connect with your local maintenance pro</h1>
+          {/* <h1>Connect with your local maintenance pro</h1> */}
 
           <p>Which service do you need?</p>
         </div>
@@ -81,7 +81,7 @@ class ServiceType extends Component {
           >
             <div className={bookingStyles.imageContainer}>
               <img
-                alt="Furniture assembly and delivery"
+                alt="Furniture assembly"
                 className={bookingStyles.serviceImage}
                 src={furniture}
               />

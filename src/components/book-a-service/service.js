@@ -22,6 +22,10 @@ class Service extends Component {
         return "Select your iPhone model"
       case "heavy lifting":
         return "Approximately how long time the task would take?"
+      case "Plumbing":
+        return "What do you need help with?"
+      case "cleaning services":
+        return "What type of cleaning is needed?"
       default:
         return null
     }
@@ -346,6 +350,103 @@ class Service extends Component {
             </button>
           </div>
         )
+
+      case "Plumbing":
+        return (
+          <div className={bookingStyles.serviceList}>
+            <button
+              onClick={() => this.props.onSelectService("Bathroom")}
+              className={bookingStyles.listItem}
+            >
+              Bathroom
+            </button>
+            <button
+              onClick={() => this.props.onSelectService("Drains")}
+              className={bookingStyles.listItem}
+            >
+              Drains
+            </button>
+            <button
+              onClick={() => this.props.onSelectService("Install Only")}
+              className={bookingStyles.listItem}
+            >
+              Install Only (I have the part)
+            </button>
+
+            <button
+              onClick={() => this.props.onSelectService("Kitchen")}
+              className={bookingStyles.listItem}
+            >
+              Kitchen
+            </button>
+
+            <button
+              onClick={() => this.props.onSelectService("Laundry")}
+              className={bookingStyles.listItem}
+            >
+              Laundry
+            </button>
+
+            <button
+              onClick={() => this.props.onSelectService("Pumps")}
+              className={bookingStyles.listItem}
+            >
+              Pumps
+            </button>
+
+            <button
+              onClick={() => this.props.onSelectService("Rough plumbing")}
+              className={bookingStyles.listItem}
+            >
+              Rough plumbing
+            </button>
+
+            <button
+              onClick={() => this.props.onSelectService("Water heater")}
+              className={bookingStyles.listItem}
+            >
+              Water heater
+            </button>
+
+            <button
+              onClick={() => this.props.onSelectService("Water or gas line")}
+              className={bookingStyles.listItem}
+            >
+              Water or gas line
+            </button>
+          </div>
+        )
+
+      case "cleaning services":
+        return (
+          <div className={bookingStyles.serviceList}>
+            <button
+              onClick={() => this.props.onSelectService("Regular Cleaning")}
+              className={bookingStyles.listItem}
+            >
+              Regular Cleaning
+            </button>
+            <button
+              onClick={() => this.props.onSelectService("Deep Cleaning")}
+              className={bookingStyles.listItem}
+            >
+              Deep Cleaning
+            </button>
+            <button
+              onClick={() => this.props.onSelectService("Move-out")}
+              className={bookingStyles.listItem}
+            >
+              Move-out
+            </button>
+            <button
+              onClick={() => this.props.onSelectService("Post-construction")}
+              className={bookingStyles.listItem}
+            >
+              Post-construction
+            </button>
+          </div>
+        )
+
       default:
         return null
     }

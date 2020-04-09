@@ -19,7 +19,7 @@ class Appointment extends Component {
     this.state = {
       serviceTypeSelected: false,
       zipCode: 0,
-      zipCodeSelected: true,
+      zipCodeSelected: false,
       serviceSelected: false,
       detailsSelected: false,
       commentSelected: false,
@@ -119,7 +119,13 @@ class Appointment extends Component {
       this.state.serviceSelected &&
       !this.state.zipCodeSelected
     ) {
-      return <ZipCode onSelectZipCode={this.selectZipCode} />
+      return (
+        <ZipCode
+          allServiceInfo={this.state.allServiceInfo}
+          onSelectZipCode={this.selectZipCode}
+          onClickLeft={this.handleClickLeft}
+        />
+      )
     }
   }
   handleClickLeft = e => {
@@ -128,6 +134,12 @@ class Appointment extends Component {
         this.setState({
           ...this.state,
           serviceTypeSelected: false,
+        })
+        break
+      case 11:
+        this.setState({
+          ...this.state,
+          serviceSelected: false,
         })
         break
 
@@ -143,7 +155,7 @@ class Appointment extends Component {
         } else {
           this.setState({
             ...this.state,
-            serviceSelected: false,
+            zipCodeSelected: false,
           })
         }
         break

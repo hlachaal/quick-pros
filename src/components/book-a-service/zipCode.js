@@ -1,5 +1,8 @@
 import React, { Component, Fragment } from "react"
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons"
+
 import bookingStyles from "../../pages/booking.module.scss"
 import { OPEN_ZIPS } from "./openZipCodes"
 
@@ -7,6 +10,12 @@ class ZipCode extends Component {
   constructor(props) {
     super(props)
     this.state = {
+      openServices: [
+        "handyman services",
+        "appliance repair",
+        "furniture assembly",
+        "tv mounting",
+      ],
       zipCode: "",
       err: "",
       buttonDisabled: true,
@@ -18,8 +27,10 @@ class ZipCode extends Component {
   validate = e => {
     this.setState({ zipCode: e.target.value })
     if (e.target.value.length >= 5) {
-      console.log(e.target.value)
-      if (OPEN_ZIPS.includes(e.target.value.toString())) {
+      if (
+        OPEN_ZIPS.includes(e.target.value.toString()) &&
+        this.state.openServices.includes(this.props.allServiceInfo.serviceType)
+      ) {
         this.setState({
           zipCode: e.target.value,
           err: "",
@@ -28,7 +39,7 @@ class ZipCode extends Component {
       } else {
         this.setState({
           zipCode: "",
-          err: "sorry, we are not in your area.",
+          err: "Sorry, this service isn't available yet in your area.",
           buttonDisabled: true,
         })
       }
@@ -38,9 +49,6 @@ class ZipCode extends Component {
         buttonDisabled: true,
       })
     }
-  }
-  handleChange = e => {
-    console.log("hi".e.value)
   }
   render() {
     const style = {
@@ -52,22 +60,26 @@ class ZipCode extends Component {
     return (
       <Fragment>
         <div className={bookingStyles.pageHead}>
-          <h1>Check if we’re available in your area</h1>
-
-          <p>What's your zip code?</p>
+          <p>Check if we’re available in your area</p>
+          <button
+            className={bookingStyles.arrowLeft}
+            onClick={() => this.props.onClickLeft(11)}
+          >
+            <FontAwesomeIcon icon={faArrowLeft} />
+          </button>
         </div>
         <section className={bookingStyles.zipCodeForm}>
           <div>
             <input
+              className={bookingStyles.zipInput}
               value={this.state.zipCode}
               type="number"
-              placeholder="Zip Code"
+              placeholder="What's your zip code?"
               onChange={this.validate}
             ></input>
             <span style={style}>&#10003;</span>
           </div>
 
-          <p className={bookingStyles.err}>{this.state.err}</p>
           <button
             style={style2}
             className={bookingStyles.continue}
@@ -78,6 +90,7 @@ class ZipCode extends Component {
             Continue
           </button>
         </section>
+        <p className={bookingStyles.err}>{this.state.err}</p>
       </Fragment>
     )
   }

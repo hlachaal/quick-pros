@@ -13,6 +13,7 @@
 }
 .review p {
   font-size: 1em !important;
+  display: block;
 }
 .review {
   display: flex;

@@ -1,0 +1,44 @@
+.sponsors {
+  margin: 40px 0 0 0;
+}
+.titre {
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+}
+.logos {
+  display: flex;
+  margin: 40px auto 40px auto;
+}
+.sponsors .logos img {
+  width: 222px;
+  height: 60px;
+  background: white;
+  margin: auto 10px auto 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+@media only screen and (max-width: 800px) {
+  .logos {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin: auto;
+  }
+  .logos img {
+    margin-bottom: 20px !important;
+  }
+  .review {
+    flex-direction: column;
+  }
+  .review img {
+    margin: auto;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .logos {
+    width: 55%;
+    margin: auto;
+  }
+}

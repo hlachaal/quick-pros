@@ -10,6 +10,7 @@
   width: 150px !important;
   height: 150px !important;
   border-radius: 50% !important;
+  display: block;
 }
 .review p {
   font-size: 1em !important;

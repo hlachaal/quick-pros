@@ -26,31 +26,31 @@ const Header = () => {
       <div className={headerStyles.nav}>
         <nav>
           <ul className={headerStyles.navList}>
-            {/* <li>
-              <Link
-                className={headerStyles.navItem}
-                activeClassName={headerStyles.activeNavItem}
-                to="/book-a-service"
-              >
-                Book a Service
-              </Link>
-            </li> */}
             <li>
               <Link
                 className={headerStyles.navItem}
                 activeClassName={headerStyles.activeNavItem}
-                to="/faq"
+                to="/#"
               >
-                FAQ
+                Services
               </Link>
             </li>
             <li>
               <Link
                 className={headerStyles.navItem}
                 activeClassName={headerStyles.activeNavItem}
-                to="/contact"
+                to="/#"
               >
-                Contact
+                Pricing
+              </Link>
+            </li>
+            <li>
+              <Link
+                className={headerStyles.navItem}
+                activeClassName={headerStyles.activeNavItem}
+                to="/#"
+              >
+                FAQ
               </Link>
             </li>
           </ul>
@@ -85,27 +85,27 @@ const Header = () => {
                     <Link
                       className={headerStyles.navItem}
                       activeClassName={headerStyles.activeNavItem}
-                      to="/book-a-service"
+                      to="/#"
                     >
-                      Book a Service
+                      Services
                     </Link>
                   </li>
                   <li>
                     <Link
                       className={headerStyles.navItem}
                       activeClassName={headerStyles.activeNavItem}
-                      to="/faq"
+                      to="/#"
+                    >
+                      Pricing
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className={headerStyles.navItem}
+                      activeClassName={headerStyles.activeNavItem}
+                      to="/#"
                     >
                       FAQ
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      className={headerStyles.navItem}
-                      activeClassName={headerStyles.activeNavItem}
-                      to="/contact"
-                    >
-                      Contact
                     </Link>
                   </li>
                 </ul>

@@ -15,7 +15,7 @@ class Reviews extends React.Component {
               alt="review"
               src="https://images.pexels.com/photos/1212984/pexels-photo-1212984.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=150&h=150"
             />
-            <p className="legend">
+            <p className="legend1">
               Lorem ipsum, or lipsum as it is sometimes known, is dummy text
               used in laying out print, graphic or web designs. The passage is
               attributed to an unknown typesetter in the 15th century who is
@@ -28,7 +28,7 @@ class Reviews extends React.Component {
               alt="review"
               src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=150&h=150"
             />
-            <p className="legend">
+            <p className="legend1">
               Lorem ipsum, or lipsum as it is sometimes known, is dummy text
               used in laying out print, graphic or web designs. The passage is
               attributed to an unknown typesetter in the 15th century who is
@@ -41,7 +41,7 @@ class Reviews extends React.Component {
               alt="review"
               src="https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=150&h=150"
             />
-            <p className="legend">
+            <p className="legend1">
               Lorem ipsum, or lipsum as it is sometimes known, is dummy text
               used in laying out print, graphic or web designs. The passage is
               attributed to an unknown typesetter in the 15th century who is

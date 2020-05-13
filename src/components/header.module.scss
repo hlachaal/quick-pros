@@ -4,8 +4,13 @@ header {
   padding: 1rem;
 }
 .logo {
-  width: 130px;
   flex: 1;
+  .turquoise {
+    color: #1dbab4;
+  }
+  span {
+    margin: 5px;
+  }
 }
 .nav {
   flex: 4;

@@ -7,8 +7,8 @@ import {
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons"
 import { Link } from "gatsby"
-import Popup from "reactjs-popup"
-import logo from "../images/logo.svg"
+import Popup from "reactjs-popup" /* 
+import logo from "../images/logo.svg" */
 
 import headerStyles from "./header.module.scss"
 
@@ -17,18 +17,16 @@ const Header = () => {
     <header>
       <div className={headerStyles.logo}>
         <Link to="/" className={headerStyles.logoWrapper}>
-          <img alt="Home services" src={logo} />
-          <span>
-            Quick
-            <br />
-            PROS
-          </span>
+          {/* <img alt="Home services" src={logo} /> */}
+          <span>Automatic </span>
+          <span>Appliance </span>
+          <span className={headerStyles.turquoise}>Tech</span>
         </Link>
       </div>
       <div className={headerStyles.nav}>
         <nav>
           <ul className={headerStyles.navList}>
-            <li>
+            {/* <li>
               <Link
                 className={headerStyles.navItem}
                 activeClassName={headerStyles.activeNavItem}
@@ -36,7 +34,7 @@ const Header = () => {
               >
                 Book a Service
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link
                 className={headerStyles.navItem}

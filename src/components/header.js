@@ -12,9 +12,8 @@ const Header = () => {
       <div className={headerStyles.logo}>
         <Link to="/" className={headerStyles.logoWrapper}>
           {/* <img alt="Home services" src={logo} /> */}
-          <span>Automatic </span>
-          <span>Appliance </span>
-          <span className={headerStyles.turquoise}>Tech</span>
+          <span>Quick </span>
+          <span className={headerStyles.turquoise}>Pros</span>
         </Link>
       </div>
       <div className={headerStyles.nav}>

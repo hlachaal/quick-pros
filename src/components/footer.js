@@ -33,7 +33,7 @@ const Footer = () => {
           </ul>
         </div>
         <div className={footerStyles.copyright}>
-          <p>© 2020 Automatic Appliance Tech™. All Rights Reserved.</p>
+          <p>© 2020 Quick Pros™. All Rights Reserved.</p>
         </div>
       </div>
     </footer>

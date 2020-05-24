@@ -9,10 +9,10 @@ import Sponsors from "../components/widget/sponsors"
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Automatic Appliance Tech" />
+    <SEO title="Quick Pros" />
     <Appointment />
-    <Reviews />
-    <Sponsors />
+    {/* <Reviews />
+    <Sponsors /> */}
   </Layout>
 )
 

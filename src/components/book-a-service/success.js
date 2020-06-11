@@ -14,12 +14,11 @@ class Success extends Component {
     return (
       <Fragment>
         <div className={bookingStyles.question}>
-          <p>Your request was successfully sent!</p>
+          <p>Thank you for your request!</p>
         </div>
         <div className={bookingStyles.detailsWrapper}>
           <p>
-            Our trusted maintenance pro will review your request and contact you
-            soon. If you have any questions please call{" "}
+            Your inquiry has been sent. If you have any questions please call{" "}
             <span>(619) 359-7532</span>.
           </p>
         </div>

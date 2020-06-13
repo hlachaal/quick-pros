@@ -5,7 +5,7 @@ import {
   faFacebook,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons"
-import { Link } from "gatsby"
+/* import { Link } from "gatsby" */
 
 import footerStyles from "./footer.module.scss"
 

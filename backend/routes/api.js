@@ -5,7 +5,7 @@ const router = express.Router()
 const Profile = require("../models/Profile")
 
 router.get("/profile", (req, res) => {
-  Profile.find()
+  Profile.find({ position: "C" })
     .then(profiles => {
       res.json({
         confirmation: "success",

@@ -67,3 +67,11 @@ yarn-error.log
 .pnp.js
 # Yarn Integrity file
 .yarn-integrity
+
+...
+# production
+/build
+/lambda
+# misc
+.env
+...

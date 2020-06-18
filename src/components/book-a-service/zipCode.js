@@ -74,7 +74,7 @@ class ZipCode extends Component {
               className={bookingStyles.zipInput}
               value={this.state.zipCode}
               type="number"
-              placeholder="zip code (92123)"
+              placeholder="zip code"
               onChange={this.validate}
             ></input>
             <span style={style}>&#10003;</span>

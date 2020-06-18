@@ -50,7 +50,7 @@ const Header = () => {
         </nav>
       </div>
       <div className={headerStyles.social}>
-        <span>Call (619) 359-7532</span>
+        {/* <span>Call (619) 359-7532</span> */}
       </div>
       <div className={headerStyles.hamburger}>
         <Popup trigger={<button className="button">&#9776;</button>} modal>
